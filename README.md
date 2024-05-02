@@ -3,8 +3,8 @@
 # Challage-1
 
   **Convert Figma file to Static Site **
-  > [Figma File](https://www.figma.com/file/gom2LU5icGzs4gGtqW0RSz/task-0?type=design&node-id=0%3A1&mode=design&t=FqKVtY2e4m8KzQX5-1)
-> [Dev mood file](https://www.figma.com/file/gom2LU5icGzs4gGtqW0RSz/task-0?type=design&node-id=0%3A1&mode=dev&t=1H7PRNHBgSabOjgG-1)
+-  > [Figma File](https://www.figma.com/file/gom2LU5icGzs4gGtqW0RSz/task-0?type=design&node-id=0%3A1&mode=design&t=FqKVtY2e4m8KzQX5-1)
+- > [Dev mood file](https://www.figma.com/file/gom2LU5icGzs4gGtqW0RSz/task-0?type=design&node-id=0%3A1&mode=dev&t=1H7PRNHBgSabOjgG-1)
 
 # chllange-2
 
