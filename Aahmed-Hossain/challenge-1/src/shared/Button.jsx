@@ -1,12 +1,11 @@
 import React from 'react';
 
-const Button = ({ children, onClick }) => {
+const Button = ({ text }) => {
   return (
     <button
-      onClick={onClick}
       className='bg-black text-white text-sm rounded w-[156.45px] text-center py-2'
     >
-      {children}
+      {text}
     </button>
   );
 };
