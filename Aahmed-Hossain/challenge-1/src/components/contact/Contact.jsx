@@ -7,7 +7,7 @@ const Contact = () => {
         <h1 className='text-7xl font-normal text-center'>Contact Us</h1>
         <p className='text-sm text-[#A3A3A3] my-12 text-center'>Drop us a line to start your project or simply just say &quot;Hello!&quot;</p>
         
-        <div className='flex flex-col gap-8 justify-between'>
+        <div className='flex flex-col  lg:flex-row gap-8 justify-between'>
             {/*  location info*/}
             <div className='w-full lg:w-5/12  flex  flex-col justify-between' >
 <h3 className='text-lg '>We’re Ready!</h3>
@@ -21,7 +21,7 @@ const Contact = () => {
             </div>
 
 {/* text input field*/}
-        <div className="flex flex-col gap-3 w-full lg:w-5/12">
+        <div className="flex flex-col  gap-3 w-full lg:w-5/12">
        <div className='flex gap-3'>
        <input
       type="text"
