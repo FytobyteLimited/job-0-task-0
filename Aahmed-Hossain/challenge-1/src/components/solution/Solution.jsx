@@ -25,7 +25,7 @@ solutions"
         {solutionData.map((item) => (
           <div
             key={item.id}
-            className="max-w-xl overflow-hidden bg-white rounded-xl shadow-md dark:bg-gray-800"
+            className="max-w-7xl overflow-hidden bg-white rounded-xl shadow-md dark:bg-gray-800"
           >
             <Image
               className="object-cover w-full h-52"
