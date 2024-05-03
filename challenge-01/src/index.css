@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --body_background: white;
+  --body_color: black;
+  --btn_color: white;
+  --btn-bg: black;
+}
+
+[data-theme="dark"] {
+  --body_background: #282c35;
+  --body_color: white;
+  --btn_color: black;
+  --btn-bg: white;
+}

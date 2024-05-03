@@ -1,0 +1,26 @@
+#app-css {
+  background-color: var(--body_background);
+  color: var(--body_color);
+}
+#navbar-glass {
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.2);
+}
+.navbar-menu ul li a:hover {
+  border-bottom: 2px solid;
+}
+.hero button {
+  background: var(--btn-bg);
+  color: var(--btn_color);
+  padding: 8px 20px;
+  border-radius: 10px;
+}
