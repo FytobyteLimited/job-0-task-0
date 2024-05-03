@@ -1,0 +1,8 @@
+.text-gradient {
+    background-image: linear-gradient(to right, #000000 14.46%, #E7E7E7);
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-gradiant {
+    background: linear-gradient(164.12deg, rgba(180, 9, 236, 0.2) 38.95%, rgba(54, 9, 236, 0.2) 92.27%);
+  }
