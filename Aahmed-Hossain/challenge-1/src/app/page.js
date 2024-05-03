@@ -1,3 +1,4 @@
+import About from "@/components/about/About";
 import Banner from "@/components/banner/Banner";
 import Blog from "@/components/blog/Blog";
 import Faq from "@/components/faq/Faq";
@@ -14,7 +15,9 @@ export default function Home() {
       <Solution/>
       <Faq/>
       <Blog/>
+      <About/>
       <Footer/>
+
       </div>
     </main>
   );
