@@ -1,6 +1,7 @@
 import Banner from "@/components/banner/Banner";
 import Blog from "@/components/blog/Blog";
 import Faq from "@/components/faq/Faq";
+import Footer from "@/components/footer/Footer";
 import Service from "@/components/service/Service";
 import Solution from "@/components/solution/Solution";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Solution/>
       <Faq/>
       <Blog/>
+      <Footer/>
       </div>
     </main>
   );

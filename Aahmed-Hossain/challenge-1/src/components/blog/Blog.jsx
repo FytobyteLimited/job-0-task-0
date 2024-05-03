@@ -17,27 +17,27 @@ const Blog = () => {
           and the world of software development.
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row rounded-xl border bg-[#F5F5F5]">
-        <div className="flex flex-col gap-2 p-4   h-72 lg:h-72 w-full lg:w-1/2">
+      <div className="flex flex-c lg:flex-row rounded-xl border bg-[#F5F5F5]">
+        <div className="flex flex-col gap-2 p-4   h-80 w-full lg:w-1/2">
           {/* <h3>
           <FaPiedPiper className="font-bold text-2xl" />
           </h3> */}
           <h4 className="font-bold text-xl dark:text-white">
-            Unveiling the Art of Web Design: A Step-by-Step Guide
+            Unveiling the Art of Web Design: A <br /> Step-by-Step Guide
           </h4>
           <p className="text-xs mt-2">
-            In the ever-evolving digital landscape, a visually appealing
-            anduser-friendly website is crucial for success. Whether
-            you&rsquo;re aseasoned designer or a novice looking to dip your toes
+            In the ever-evolving digital landscape,appealing
+            anduser-friendly website is crucial for success. ...<span className="hidden md:block"> Whether 
+           you  & rsquo;re aseasoned designer or a novice looking to dip your toes
             into the world of web design, this step-by- step guide will help you
-            create a stunning and effective…
+            create a stunning and effective…</span>
           </p>
           <button className="bg-black text-white text-sm rounded w-[156.45px] text-center py-2 mt-2">
             Learn More
           </button>
         </div>
 
-        <div className=" lg:h-72 w-full lg:w-1/2">
+        <div className=" h-80 w-full lg:w-1/2">
           <Image
             className="h-full w-full rounded-xl"
             src={blogImg}
