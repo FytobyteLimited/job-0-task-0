@@ -24,9 +24,9 @@ import {  Table, TableBody,TableCell,TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Dialog, DialogContent } from "@radix-ui/react-dialog";
+import { DialogModal } from "./components/ui/DialogModal";
 
-const data = [
+export const data = [
   {
     id: "m5gr84i9",
     status: "Canceled",
@@ -346,11 +346,8 @@ export const columns = [
 
 
 export default function App() {
-  const [isModalOpen, setIsModalOpen] = React.useState(false);
  
-  const handleShowDialog = () => {
-    setIsModalOpen(true);
-  }
+const [task, setTask] = React.useState(data);
   const [pagination, setPagination] = React.useState({
     pageIndex: 0,
     pageSize: 10,
@@ -393,12 +390,8 @@ export default function App() {
           className="max-w-sm"
         />
        <div className="flex gap-2">
-       <Button onClick={handleShowDialog} variant="outline" className="">
-       ✛ New Task <Dialog>
-
-       <DialogContent/>
-       </Dialog>
-            </Button>
+        {/* dialog modal */}
+       <DialogModal setTask={setTask}/>
         <DropdownMenu>
 
           <DropdownMenuTrigger asChild>
