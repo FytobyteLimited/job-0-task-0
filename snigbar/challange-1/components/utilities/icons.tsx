@@ -148,3 +148,33 @@ export function CodeIcon() {
     </svg>
   );
 }
+
+export function BookIcon() {
+  const { resolvedTheme } = useTheme();
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="31"
+      height="31"
+      fill="none"
+      viewBox="0 0 31 31"
+      className="w-6 h-6"
+    >
+      <g clipPath="url(#clip0_3_950)">
+        <path
+          fill={resolvedTheme === "dark" ? "white" : "black"}
+          d="M25.535 7.4V2.375h-.225c-4.2.188-7.688 2.888-9.788 5.025l-.112.112-.113-.112C13.16 5.262 9.71 2.562 5.51 2.375h-.225V7.4H.41v8.662c0 2.1.075 4.2.225 5.925a6.962 6.962 0 006.487 6.376c2.663.15 5.475.262 8.288.262 2.812 0 5.625-.113 8.287-.3a6.963 6.963 0 006.488-6.375c.15-1.725.225-3.825.225-5.925V7.4h-4.875zm0 8.662c0 1.988-.075 3.938-.225 5.513-.113 1.012-.938 1.838-1.95 1.875-5.294.375-10.607.375-15.9 0-1.013-.037-1.875-.863-1.95-1.875-.15-1.575-.225-3.563-.225-5.512V7.4c3.525.15 7.05 3.938 8.1 5.4l2.025 2.813 2.025-2.813c1.05-1.5 4.575-5.25 8.1-5.4v8.662z"
+        ></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_3_950">
+          <path
+            fill={resolvedTheme === "dark" ? "white" : "black"}
+            d="M0 0H30V30H0z"
+            transform="translate(.41 .5)"
+          ></path>
+        </clipPath>
+      </defs>
+    </svg>
+  );
+}
