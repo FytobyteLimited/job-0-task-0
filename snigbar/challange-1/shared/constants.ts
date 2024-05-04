@@ -1,1 +1,2 @@
-export const gradientText = "bg-gradient-to-r from-white to-[685E5E]";
+export const navLinkStyle =
+  "border-b border-b-transparent hover:border-b-primary-blue dark:hover:border-b-white";

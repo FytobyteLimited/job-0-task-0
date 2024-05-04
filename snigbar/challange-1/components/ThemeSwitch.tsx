@@ -24,7 +24,7 @@ export default function ThemeSwitch() {
 
   if (resolvedTheme === "dark") {
     return (
-      <div className="md:px-4 md:py-1 rounded-full bg-primary-dark">
+      <div className="md:px-4 md:py-1 rounded-full md:bg-primary-dark">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -46,7 +46,7 @@ export default function ThemeSwitch() {
 
   if (resolvedTheme === "light") {
     return (
-      <div className="md:px-4 md:py-1 rounded-full bg-white/70">
+      <div className="md:px-4 md:py-1 rounded-full md:bg-white/70">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

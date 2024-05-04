@@ -1,4 +1,5 @@
 import Header from "@/components/Header/Header";
+import { OurServices } from "@/sections/OurServices";
 
 export default function Home() {
   return (
@@ -8,7 +9,9 @@ export default function Home() {
       </div>
 
       {/*  */}
-      <main className="max-w-screen-xl mx-auto flex flex-col items-center bg-violet-300 h-[200vh]"></main>
+      <main className="max-w-screen-xl mx-auto flex flex-col items-center my-4">
+        <OurServices />
+      </main>
     </div>
   );
 }
