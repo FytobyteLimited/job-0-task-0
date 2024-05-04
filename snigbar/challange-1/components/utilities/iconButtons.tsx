@@ -5,13 +5,13 @@ interface Props {
   text: string;
 }
 
-const iconButtons = ({ Icon, text }: Props) => {
+const IconButtons = ({ Icon, text }: Props) => {
   return (
-    <div className="flex justify-between items-center px-2 py-1 gap-4 border-primary-dark dark:border-white rounded-full">
-      <p>{text}</p>
+    <div className="flex justify-between items-center gap-4 border border-primary-dark dark:border-white rounded-full px-4 py-1">
+      <p className="text-sm">{text}</p>
       <Icon />
     </div>
   );
 };
 
-export default iconButtons;
+export default IconButtons;

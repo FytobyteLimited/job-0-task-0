@@ -9,7 +9,7 @@ export default function Home() {
       </div>
 
       {/*  */}
-      <main className="max-w-screen-xl mx-auto flex flex-col items-center my-4">
+      <main className="max-w-screen-xl mx-auto flex flex-col items-center my-4 px-4">
         <OurServices />
       </main>
     </div>

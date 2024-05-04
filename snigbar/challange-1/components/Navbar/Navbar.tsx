@@ -30,6 +30,10 @@ const Navbar = () => {
       </ul>
       <div className="flex justify-between items-center gap-2 md:gap-4">
         <ThemeSwitch />
+        {/* sign up button */}
+        <button className="px-3 lg:px-6 py-2 rounded-full bg-gray-800 md:bg-primary-dark/80  font-light text-sm">
+          sign up
+        </button>
         <MobileMenuButton />
       </div>
     </nav>
