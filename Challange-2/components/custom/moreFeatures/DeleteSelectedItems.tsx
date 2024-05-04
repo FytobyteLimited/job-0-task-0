@@ -21,6 +21,7 @@ import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 
+
 interface pageProps {
     selectedItems: Row[]
 }
@@ -89,7 +90,7 @@ const DeleteSelectedItems: React.FC<pageProps> = ({ selectedItems }) => {
                                 <div>{task.status}</div>
 
                                 <Separator orientation="vertical" />
-                                <div className="line-clamp-1">{task.title}</div>
+                                <div className="line-clamp-1" title={task.title} >{task.title}</div>
                                 <Button className="px-1 py-0" size={'icon'} variant={"ghost"}
                                     onClick={() => singleDelete(task.id)}
                                 >
