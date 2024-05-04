@@ -11,8 +11,8 @@ function App() {
     return (
         <div id='app-css' className=''>
             {/* navbar */}
-            <div className='fixed w-full top-3 z-50'> {/* Increase z-index to ensure navbar is above other elements */}
-                <div id='navbar-glass' className="py-3 px-5 text-sm rounded-full max-w-5xl flex justify-between items-center mx-auto">
+            <div className='lg:fixed w-full top-3 z-50'>
+                <div id='navbar-glass' className="hidden py-3 px-5 text-sm rounded-full max-w-5xl md:flex justify-between items-center mx-auto">
                     <figure id='nav-logo'></figure>
                     <div className='navbar-menu'>
                         <ul className='flex gap-5'>
@@ -30,23 +30,32 @@ function App() {
                         <a className="px-5 py-1 bg-black text-white text-xs rounded-3xl">Talk with us</a>
                     </div>
                 </div>
+                {/* for small nav */}
+                <div className="lg:hidden pt-6 px-5 text-sm w-full flex justify-between items-center mx-auto">
+                    <figure id='nav-logo'></figure>
+                    <div className="flex items-center">
+                        <DarkMode></DarkMode>
+                        <a className="px-5 py-1 bg-black text-white text-xs rounded-3xl">Talk with us</a>
+                        <figure className='menu-logo'></figure>
+                    </div>
+                </div>
             </div>
             {/* banner */}
-            <div className="hero min-h-screen relative" style={{ backgroundImage: 'url(/banner.png)' }}>
+            <div id='hero-banner' className="hero min-h-screen relative">
                 <div className="hero-overlay bg-opacity-0"></div>
                 <div className="hero-content text-center relative">
                     <div className="max-w-3xl flex flex-col relative">
                         <h1 className="fade-text-main mb-5 text-5xl font-bold">Transform your workflow with cutting-edge solutions from FYTOBYTE LIMITED.</h1>
-                        <p className="mb-5 max-w-xl mx-auto text-xl font-semibold">Lorem ipsum dolor sit amet, consectetur
+                        <p className="hidden lg:block mb-5 max-w-xl mx-auto text-xl font-semibold">Lorem ipsum dolor sit amet, consectetur
                             adipisicing elit. Aliquid sapiente suscipit amet
                             optio quia fuga rerum ex cupiditate maiores,
                             perferendis blanditiis, quam a.</p>
-                        <div className='flex gap-5 mx-auto'>
-                            <button className="">Get Started</button>
-                            <button className="">Join us</button>
+                        <div className='flex gap-2 lg:gap-5 mx-auto'>
+                            <button className="px-3 py-2 rounded-md text-xs lg:text-sm">Get Started</button>
+                            <button className="px-3 py-2 rounded-md text-xs lg:text-sm">Join us</button>
                         </div>
                     </div>
-                    <figure className='w-full absolute top-[220px] left-1/2 transform -translate-x-80 -translate-y-1 -z-10'>
+                    <figure className='w-full absolute top-80 lg:top-[220px] lg:left-1/2 transform lg:-translate-x-80 -translate-y-4 lg:-translate-y-1 -z-10'>
                         <img className='w-[600px]' src="/public/banner-img.png" alt="" />
                     </figure>
                 </div>
@@ -58,38 +67,44 @@ function App() {
                     <FaGears />
                 </div>
                 <div className='text-center space-y-5 mt-5 flex flex-col items-center'>
-                    <h3 className='fade-text text-3xl font-bold max-w-lg'>Transform your tech business with tailored services</h3>
+                    <h3 className='fade-text lg:w-full w-1/2 text-3xl font-bold max-w-lg'>Transform your tech business with tailored services</h3>
                     <p className='text-gray-400'>Websites / Applications / Web3 / Blockchain</p>
                 </div>
-                <div className='max-w-4xl mx-auto space-y-5 mt-10'>
-                    <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-                        <div id='badge-card' className="h-52 col-span-1 rounded-3xl p-5">
+                
+                <div className='max-w-4xl lg:p-0 p-10 mx-auto space-y-5 lg:mt-10'>
+
+                    <div className="grid grid-cols-1 gap-3 lg:grid-cols-3 lg:gap-8">
+                        <div id='badge-card' className="h-52 w-40 lg:w-full mx-auto col-span-1 rounded-3xl p-5">
                             <figure id='logo-cloud'></figure>
                             <p className='text-lg font-bold'>Lorem Ipsum</p>
                             <p className='text-[11px]'>Create Fast And Simple</p>
-                            <p className='text-xs mt-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eos voluptatem quo laborum perferendis eligendi voluptas nam dignissimos hic dolorem inventore…</p>
+                            <p className='text-xs mt-3 lg:mt-5 line-clamp-3 lg:line-clamp-none'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eos voluptatem quo laborum perferendis eligendi voluptas nam dignissimos hic dolorem inventore…</p>
                         </div>
-                        <div className="h-52 col-span-2"><img className='w-full h-52 object-contain rounded-4xl' src="/public/grid-img-1.png" alt="" /></div>
+                        <div className="h-52 lg:col-span-2">
+                            <img className='w-full h-52 object-cover rounded-3xl' src="/public/grid-img-1.png" alt="" />
+                        </div>
                     </div>
-                    <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+
+                    <div className="grid grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-8">
                         <div className="h-52"><img className='w-full h-52 object-cover rounded-3xl' src="/public/grid-img-2.png" alt="" /></div>
 
-                        <div id='badge-card' className="h-52 col-span-1 rounded-3xl border-2 bg-white p-5">
+                        <div id='badge-card' className="h-52 w-40 lg:w-full mx-auto col-span-1 rounded-3xl p-5">
                             <figure id='logo-code'></figure>
                             <p className='text-lg font-bold'>Custom Web Development</p>
                             <p className='text-[11px]'>SPA / MPA</p>
-                            <p className='text-xs mt-5'>Tailored website solutions to meet specific
+                            <p className='text-xs mt-3 lg:mt-5 line-clamp-3 lg:line-clamp-none'>Tailored website solutions to meet specific
                                 business needs and goals.</p>
                         </div>
 
-                        <div className="h-52 col-span-1 rounded-3xl bg-gradient-to-br from-[#e7a0ff9a] to-[#977cff6a] p-5">
+                        <div className="h-52 w-40 lg:w-full mx-auto col-span-2 rounded-3xl p-5 bg-gradient-to-br from-[#e7a0ff9a] to-[#977cff6a]">
                             <figure id='logo-code'></figure>
                             <p className='text-lg font-bold'>Custom Web Development</p>
                             <p className='text-[11px]'>SPA / MPA</p>
-                            <p className='text-xs mt-5'>Tailored website solutions to meet specific
+                            <p className='text-xs mt-3 lg:mt-5 line-clamp-3 lg:line-clamp-none'>Tailored website solutions to meet specific
                                 business needs and goals.</p>
                         </div>
                     </div>
+
                 </div>
             </div>
             {/* section cards */}
@@ -99,7 +114,7 @@ function App() {
                     <FaUmbrella />
                 </div>
                 <div className='text-center space-y-5 mt-5 flex flex-col items-center'>
-                    <h3 className='fade-text text-3xl font-bold max-w-lg'>Streamlining operations,
+                    <h3 className='fade-text lg:w-full w-1/2 text-3xl font-bold max-w-lg'>Streamlining operations,
                         unleashing seamless digital solutions</h3>
                     <p className='text-gray-400'>Innovative solutions for seamless digital transformation.</p>
                 </div>
@@ -176,7 +191,7 @@ function App() {
                     <SiKnowledgebase />
                 </div>
                 <div className='text-center space-y-5 mt-5 flex flex-col items-center'>
-                    <h3 className='fade-text text-3xl font-bold max-w-lg'>FAQ & Documentation</h3>
+                    <h3 className='fade-text lg:w-full w-1/2 text-3xl font-bold max-w-lg'>FAQ & Documentation</h3>
                     <p className='text-gray-400 w-96'>FYTOBYTE LIMITED provides customers complete entry to knowledge base API and documentation.</p>
                 </div>
                 <div className='max-w-4xl mx-auto space-y-5 mt-10'>
@@ -207,7 +222,7 @@ function App() {
                     <IoNewspaperOutline />
                 </div>
                 <div className='text-center space-y-5 mt-5 flex flex-col items-center'>
-                    <h3 className='fade-text text-3xl font-bold max-w-lg'>Our Blog & News</h3>
+                    <h3 className='fade-text lg:w-full w-1/2 text-3xl font-bold max-w-lg'>Our Blog & News</h3>
                     <p className='text-gray-400 w-96'>We share essential insights from the technology sector, AI,
                         and the world of software development.</p>
                 </div>
