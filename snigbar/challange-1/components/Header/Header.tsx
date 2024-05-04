@@ -1,12 +1,11 @@
 import Image from "next/image";
-
 const Header = () => {
   return (
     <div className="w-full h-[110vh] md:bg-header-background bg-no-repeat bg-cover mx-auto -z-20">
       {/* header contents */}
       <div className="flex flex-col items-center justify-center text-center gap-4 h-full mx-auto w-4/5 lg:w-3/5 z-40 mt-4 md:mt-0">
         {/* heading */}
-        <h1 className="text-center text-2xl md:text-3xl lg:text-5xl font-bold md:leading-[30px] lg:leading-[60px]">
+        <h1 className="text-center text-2xl md:text-3xl lg:text-5xl font-bold md:leading-[30px] lg:leading-[60px] gradient-text">
           Transform your workflow with cutting-edge solutions from FYTOBYTE
           LIMITED.
         </h1>

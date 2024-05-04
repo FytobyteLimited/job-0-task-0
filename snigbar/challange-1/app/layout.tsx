@@ -21,13 +21,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning={true}>
       <Providers>
         <body className={`${inter.className} mx-auto w-full`}>
-          <div className="mx-auto flex flex-col items-center w-full h-[138vh] relative">
+          <div className="w-full flex justify-center">
             <Navbar />
-            <Header />
           </div>
-          <div className="max-w-screen-xl mx-auto flex flex-col items-center bg-violet-300 h-[200vh]">
-            {children}
-          </div>
+          {children}
         </body>
       </Providers>
     </html>
