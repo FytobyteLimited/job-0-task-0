@@ -20,11 +20,10 @@ function App() {
                             <li><a href="">Services</a></li>
                             <li><a href="">Solution</a></li>
                             <li><a href="">FAQ</a></li>
-                            <li><a href="">About</a></li>
+                            <li><a href="">About us</a></li>
                             <li><a href="">Blog</a></li>
                         </ul>
                     </div>
-
                     <div className="flex items-center">
                         <DarkMode></DarkMode>
                         <a className="px-5 py-1 bg-black text-white text-xs rounded-3xl">Talk with us</a>

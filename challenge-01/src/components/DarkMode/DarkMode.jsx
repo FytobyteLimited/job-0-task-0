@@ -1,5 +1,4 @@
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
-import './DarkMode.css'
 
 const DarkMode = () => {
     const setDarkMode = () => {
