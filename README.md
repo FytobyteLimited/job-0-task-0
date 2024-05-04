@@ -17,3 +17,7 @@ Submission :
 - after completing the task create a pr to this repo
 - must provide live link
 - Deadline 5th may 12AM Bangladesh standard time
+
+ >[Challenge-2 like link](https://job-task-theta.vercel.app/)
+
+ #Please check "select and delete" functionalities. 
