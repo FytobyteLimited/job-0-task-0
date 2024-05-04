@@ -5,6 +5,7 @@
 :root {
   --body_background: white;
   --body_color: black;
+  --navbar-ul-text: #224192;
   --text-gradient: linear-gradient(to right, #000000 60%, #5c5c5ca5);
   --btn_color: white;
   --btn-bg: black;
@@ -15,12 +16,13 @@
   --image-source-cloud: url("cloud.svg");
   --image-source-code: url("code.svg");
   --badge-card-color: rgb(241, 241, 241);
-  --border-color: rgb(158, 158, 158);
+  --badge-color: black;
 }
 
 [data-theme="dark"] {
   --body_background: black;
   --body_color: white;
+  --navbar-ul-text: white;
   --text-gradient: linear-gradient(to right, #ffffff 60%, #000000);
   --btn_color: black;
   --btn-bg: white;
@@ -31,4 +33,6 @@
   --image-source-cloud: url("cloud-white.svg");
   --image-source-code: url("code-white.svg");
   --badge-card-color: rgb(0, 0, 0);
+  --border-color: rgba(241, 241, 241, 0.307);
+  --badge-color: rgba(241, 241, 241, 0.307);
 }

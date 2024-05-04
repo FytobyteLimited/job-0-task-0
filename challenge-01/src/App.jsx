@@ -2,6 +2,9 @@ import './App.css'
 import DarkMode from './components/DarkMode/DarkMode'
 import { FaGears } from "react-icons/fa6";
 import { FaUmbrella } from "react-icons/fa";
+import { SiKnowledgebase } from "react-icons/si";
+import { FaPiedPiper } from "react-icons/fa";
+import { IoNewspaperOutline } from "react-icons/io5";
 
 function App() {
 
@@ -66,7 +69,7 @@ function App() {
                             <p className='text-[11px]'>Create Fast And Simple</p>
                             <p className='text-xs mt-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eos voluptatem quo laborum perferendis eligendi voluptas nam dignissimos hic dolorem inventore…</p>
                         </div>
-                        <div className="h-52 col-span-2 rounded-3xl"><img className='w-full h-52 object-cover rounded-3xl' src="/public/grid-img-1.png" alt="" /></div>
+                        <div className="h-52 col-span-2"><img className='w-full h-52 object-contain rounded-4xl' src="/public/grid-img-1.png" alt="" /></div>
                     </div>
                     <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
                         <div className="h-52"><img className='w-full h-52 object-cover rounded-3xl' src="/public/grid-img-2.png" alt="" /></div>
@@ -91,7 +94,7 @@ function App() {
             </div>
             {/* section cards */}
             <div className='mt-28 mb-20'>
-                <div className='w-fit flex gap-2 mx-auto rounded-full px-3 justify-center items-center border-[1.5px] border-black'>
+                <div id='badge' className='w-fit flex gap-2 mx-auto rounded-full px-3 justify-center items-center border-[1.5px] border-black'>
                     <h3>Our Solution</h3>
                     <FaUmbrella />
                 </div>
@@ -102,61 +105,61 @@ function App() {
                 </div>
                 <div className='max-w-4xl mx-auto space-y-5 mt-10'>
                     <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
-                        <div className="h-60 rounded-xl bg-gray-100">
+                        <div id='kb-badge' className="h-60 rounded-xl">
                             <img
                                 alt=""
                                 src="/public/card-1.png"
                                 className="h-64 w-full object-cover sm:h-80 lg:h-1/2 rounded-t-xl"
                             />
                             <div className='px-5 pt-2'>
-                                <h3 className="text-lg font-bold text-gray-900 sm:text-xl">FYTOBYTE LIMITED</h3>
-                                <p>Innovate</p>
-                                <p className="mt-2 text-xs text-black">
+                                <h3 className="text-lg font-bold sm:text-xl">FYTOBYTE LIMITED</h3>
+                                <p className='font-bold'>Solutions</p>
+                                <p className="mt-2 text-xs">
                                     A comprehensive business service app offering efficient solutions for seamless operations
                                     and growth.
                                 </p>
                             </div>
                         </div>
-                        <div className="h-60 rounded-xl bg-gray-100">
+                        <div id='kb-badge' className="h-60 rounded-xl">
                             <img
                                 alt=""
                                 src="/public/card-2.png"
                                 className="h-64 w-full object-cover sm:h-80 lg:h-1/2 rounded-t-xl"
                             />
                             <div className='px-5 pt-2'>
-                                <h3 className="text-lg font-bold text-gray-900 sm:text-xl">FYTOBYTE LIMITED</h3>
-                                <p>Innovate</p>
-                                <p className="mt-2 text-xs text-black">
+                                <h3 className="text-lg font-bold sm:text-xl">FYTOBYTE LIMITED</h3>
+                                <p className='font-bold'>Innovate</p>
+                                <p className="mt-2 text-xs ">
                                     A comprehensive business service app offering efficient solutions for seamless operations
                                     and growth.
                                 </p>
                             </div>
                         </div>
-                        <div className="h-60 rounded-xl bg-gray-100">
+                        <div id='kb-badge' className="h-60 rounded-xl">
                             <img
                                 alt=""
                                 src="/public/card-3.png"
                                 className="h-64 w-full object-cover sm:h-80 lg:h-1/2 rounded-t-xl"
                             />
                             <div className='px-5 pt-2'>
-                                <h3 className="text-lg font-bold text-gray-900 sm:text-xl">FYTOBYTE LIMITED</h3>
-                                <p>Innovate</p>
-                                <p className="mt-2 text-xs text-black">
+                                <h3 className="text-lg font-bold sm:text-xl">FYTOBYTE LIMITED</h3>
+                                <p className='font-bold'>Connect</p>
+                                <p className="mt-2 text-xs">
                                     A comprehensive business service app offering efficient solutions for seamless operations
                                     and growth.
                                 </p>
                             </div>
                         </div>
-                        <div className="h-60 rounded-xl bg-gray-100">
+                        <div id='kb-badge' className="h-60 rounded-xl">
                             <img
                                 alt=""
                                 src="/public/card-4.png"
                                 className="h-64 w-full object-cover sm:h-80 lg:h-1/2 rounded-t-xl"
                             />
                             <div className='px-5 pt-2'>
-                                <h3 className="text-lg font-bold text-gray-900 sm:text-xl">FYTOBYTE LIMITED</h3>
-                                <p>Innovate</p>
-                                <p className="mt-2 text-xs text-black">
+                                <h3 className="text-lg font-bold sm:text-xl">FYTOBYTE LIMITED</h3>
+                                <p className='font-bold'>Sphere</p>
+                                <p className="mt-2 text-xs">
                                     A comprehensive business service app offering efficient solutions for seamless operations
                                     and growth.
                                 </p>
@@ -168,9 +171,9 @@ function App() {
             </div>
             {/* section cards */}
             <div className='mt-20 mb-20'>
-                <div className='w-fit flex gap-2 mx-auto rounded-full px-3 justify-center items-center border-[1.5px] border-black'>
+                <div id='badge' className='w-fit flex gap-2 mx-auto rounded-full px-3 justify-center items-center border-[1.5px] border-black'>
                     <h3>Knowledge Base</h3>
-                    <img className='w-4' src="/public/kb.png" alt="" />
+                    <SiKnowledgebase />
                 </div>
                 <div className='text-center space-y-5 mt-5 flex flex-col items-center'>
                     <h3 className='fade-text text-3xl font-bold max-w-lg'>FAQ & Documentation</h3>
@@ -178,16 +181,16 @@ function App() {
                 </div>
                 <div className='max-w-4xl mx-auto space-y-5 mt-10'>
                     <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
-                        <div className="h-72 rounded-xl">
+                        <div id='badge-card' className="h-72 rounded-3xl">
                             <img
                                 alt=""
                                 src="/public/robot.png"
-                                className="h-full w-full object-cover rounded-2xl"
+                                className="h-full w-full object-cover rounded-3xl"
                             />
                         </div>
-                        <div className="h-60 rounded-xl bg-gray-100">
-                            <div className="h-72 col-span-1 rounded-3xl bg-gray-100 p-5">
-                                <img className='w-10' src="/public/faq-logo.png" alt="" />
+                        <div className="h-60 rounded-xl">
+                            <div id='badge-card' className="h-72 col-span-1 rounded-3xl p-5">
+                                <FaPiedPiper className='text-4xl' />
                                 <p className='text-lg font-bold'>Full API ACCESS</p>
                                 <p className='text-xs mt-5'>Sign up and access our intuitive platform. Upload your data , then customize preferences. Our robust tools analyze and generate insights promptly. Collaborate seamlessly with team members using integrated communication features. Watch your operations optimize as our app streamlines workflows and drives efficiency for your success.</p>
                                 <button className='faq-btn px-3 py-1'>Learn More</button>
@@ -199,9 +202,9 @@ function App() {
             </div>
             {/* section cards */}
             <div className='mt-20 mb-20'>
-                <div className='w-fit flex gap-2 mx-auto rounded-full px-3 justify-center items-center border-[1.5px] border-black'>
-                    <h3>Knowledge Base</h3>
-                    <img className='w-4' src="/public/kb.png" alt="" />
+                <div id='badge' className='w-fit flex gap-2 mx-auto rounded-full px-3 justify-center items-center border-[1.5px] border-black'>
+                    <h3>Tech News</h3>
+                    <IoNewspaperOutline />
                 </div>
                 <div className='text-center space-y-5 mt-5 flex flex-col items-center'>
                     <h3 className='fade-text text-3xl font-bold max-w-lg'>Our Blog & News</h3>
@@ -210,9 +213,9 @@ function App() {
                 </div>
                 <div className='max-w-4xl mx-auto space-y-5 mt-10'>
                     <div className="grid grid-cols-1 h-72 rounded-xl">
-                        <div className="h-72 rounded-2xl bg-gray-100 flex">
+                        <div id='badge-card' className="h-72 rounded-2xl flex">
                             <div className="w-1/2 p-5">
-                                <p className='text-lg font-bold'>Unveiling the Art of Web Design: A Step-by-Step Guide</p>
+                                <p className='text-md font-bold'>Unveiling the Art of Web Design: A Step-by-Step Guide</p>
                                 <p className='text-xs mt-5'>In the ever-evolving digital landscape, a visually appealing
                                     anduser-friendly website is crucial for success. Whether you&rsquo;re aseasoned designer or a novice looking to dip your toes into the world of web design, this step-by-
                                     step guide will help you create a stunning and effective…</p>
@@ -220,7 +223,7 @@ function App() {
                             </div>
                             <img
                                 alt=""
-                                src="/public/robot.png"
+                                src="/public/blog.png"
                                 className="h-full w-full object-cover rounded-2xl"
                             />
                         </div>
@@ -380,7 +383,7 @@ function App() {
                         </li>
                     </ul>
                     <div className="mt-2 pt-2">
-                        <p className="text-center text-xs/relaxed text-gray-500">© 2023 Fytobyte. All Rights Reserved.</p>
+                        <p className="text-center text-xs/relaxed">© 2023 Fytobyte. All Rights Reserved.</p>
                     </div>
                 </div>
             </footer>
