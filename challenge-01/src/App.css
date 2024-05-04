@@ -18,16 +18,50 @@
 .navbar-menu ul li a:hover {
   border-bottom: 2px solid;
 }
+#nav-logo {
+  width: 150px;
+  height: 20px;
+  background-image: var(--image-source);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .hero button {
   background: var(--btn-bg);
   color: var(--btn_color);
   padding: 8px 20px;
   border-radius: 10px;
 }
-.fade-text-main {
-  color: linear-gradient(to right, rgba(230, 0, 0, 0) 50%, rgb(235, 0, 0) 100%);
+#badge {
+  border-color: var(--body_color);
+}
+#badge-card {
+  background: var(--badge-card-color);
+  border: 0.1px solid white;
 }
 
+#logo-cloud {
+  width: 150px;
+  height: 30px;
+  margin-bottom: 5px;
+  background-image: var(--image-source-cloud);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#logo-code {
+  width: 150px;
+  height: 30px;
+  margin-bottom: 5px;
+  background-image: var(--image-source-code);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.fade-text-main {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 .fade-text {
   position: relative;
 }
@@ -41,8 +75,8 @@
   height: 100%;
   background-image: linear-gradient(
     to right,
-    rgba(255, 255, 255, 0) 50%,
-    rgb(255, 255, 255) 100%
+    var(--fade-color-start) 50%,
+    var(--fade-color-end) 100%
   );
 }
 .faq-btn {
@@ -50,4 +84,8 @@
   color: var(--btn_color);
   border-radius: 5px;
   margin: 15px 0 0 0;
+}
+
+footer p {
+  color: var(--footer-text);
 }

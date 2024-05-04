@@ -10,7 +10,7 @@ function App() {
             {/* navbar */}
             <div className='fixed w-full top-3 z-50'> {/* Increase z-index to ensure navbar is above other elements */}
                 <div id='navbar-glass' className="py-3 px-5 text-sm rounded-full max-w-5xl flex justify-between items-center mx-auto">
-                    <figure><img className='w-32' src="/public/logo.png" alt="" /></figure>
+                    <figure id='nav-logo'></figure>
                     <div className='navbar-menu'>
                         <ul className='flex gap-5'>
                             <li><a href="">Home</a></li>
@@ -50,7 +50,7 @@ function App() {
             </div>
             {/* section */}
             <div className='mt-56'>
-                <div className='w-fit flex gap-2 mx-auto rounded-full px-3 justify-center items-center border-[1.5px] border-black'>
+                <div id='badge' className='w-fit flex gap-2 mx-auto rounded-full px-3 justify-center items-center border-[1.5px] border-black'>
                     <h3>Our Services</h3>
                     <FaGears />
                 </div>
@@ -60,8 +60,8 @@ function App() {
                 </div>
                 <div className='max-w-4xl mx-auto space-y-5 mt-10'>
                     <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-                        <div className="h-52 col-span-1 rounded-3xl bg-gray-100 p-5">
-                            <img className='w-10' src="/public/cloud.png" alt="" />
+                        <div id='badge-card' className="h-52 col-span-1 rounded-3xl p-5">
+                            <figure id='logo-cloud'></figure>
                             <p className='text-lg font-bold'>Lorem Ipsum</p>
                             <p className='text-[11px]'>Create Fast And Simple</p>
                             <p className='text-xs mt-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eos voluptatem quo laborum perferendis eligendi voluptas nam dignissimos hic dolorem inventore…</p>
@@ -71,8 +71,8 @@ function App() {
                     <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
                         <div className="h-52"><img className='w-full h-52 object-cover rounded-3xl' src="/public/grid-img-2.png" alt="" /></div>
 
-                        <div className="h-52 col-span-1 rounded-3xl border-2 bg-white p-5">
-                            <img className='w-10' src="/public/code.png" alt="" />
+                        <div id='badge-card' className="h-52 col-span-1 rounded-3xl border-2 bg-white p-5">
+                            <figure id='logo-code'></figure>
                             <p className='text-lg font-bold'>Custom Web Development</p>
                             <p className='text-[11px]'>SPA / MPA</p>
                             <p className='text-xs mt-5'>Tailored website solutions to meet specific
@@ -80,7 +80,7 @@ function App() {
                         </div>
 
                         <div className="h-52 col-span-1 rounded-3xl bg-gradient-to-br from-[#e7a0ff9a] to-[#977cff6a] p-5">
-                            <img className='w-10' src="/public/code.png" alt="" />
+                            <figure id='logo-code'></figure>
                             <p className='text-lg font-bold'>Custom Web Development</p>
                             <p className='text-[11px]'>SPA / MPA</p>
                             <p className='text-xs mt-5'>Tailored website solutions to meet specific
@@ -233,73 +233,73 @@ function App() {
                 <div className="mx-auto max-w-5xl p-5 px-20">
                     <div className="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-14 lg:mt-0">
                         <div className="col-span-2 sm:col-span-1">
-                            <p className="font-bold text-gray-900">Explore</p>
+                            <p className="font-bold">Explore</p>
 
                             <ul className="mt-6 space-y-4 text-sm">
                                 <li>
-                                    <a href="#" className="text-gray-700 transition hover:opacity-75">About FYTOBYTE LIMITED</a>
+                                    <a href="#" className="text-gray-400 transition hover:opacity-75">About FYTOBYTE LIMITED</a>
                                 </li>
 
                                 <li>
-                                    <a href="#" className="text-gray-700 transition hover:opacity-75">Our Solutions</a>
+                                    <a href="#" className="text-gray-400 transition hover:opacity-75">Our Solutions</a>
                                 </li>
 
                                 <li>
-                                    <a href="#" className="text-gray-700 transition hover:opacity-75">Our Blog</a>
+                                    <a href="#" className="text-gray-400 transition hover:opacity-75">Our Blog</a>
                                 </li>
                             </ul>
                         </div>
 
                         <div className="col-span-2 sm:col-span-1">
-                            <p className="font-bold text-gray-900">Expertise</p>
+                            <p className="font-bold">Expertise</p>
 
                             <ul className="mt-6 space-y-4 text-sm">
                                 <li>
-                                    <a href="#" className="text-gray-700 transition hover:opacity-75"> Cloud Integration Solutions </a>
+                                    <a href="#" className="text-gray-400 transition hover:opacity-75"> Cloud Integration Solutions </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" className="text-gray-700 transition hover:opacity-75"> Custom Web Development </a>
+                                    <a href="#" className="text-gray-400 transition hover:opacity-75"> Custom Web Development </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" className="text-gray-700 transition hover:opacity-75"> Data Analytics and Insights </a>
+                                    <a href="#" className="text-gray-400 transition hover:opacity-75"> Data Analytics and Insights </a>
                                 </li>
                             </ul>
                         </div>
 
                         <div className="col-span-2 sm:col-span-1">
-                            <p className="font-bold text-gray-900">Services</p>
+                            <p className="font-bold">Services</p>
 
                             <ul className="mt-6 space-y-4 text-sm">
                                 <li>
-                                    <a href="#" className="text-gray-700 transition hover:opacity-75"> Cybersecurity & Compliance </a>
+                                    <a href="#" className="text-gray-400 transition hover:opacity-75"> Cybersecurity & Compliance </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" className="text-gray-700 transition hover:opacity-75"> AI-Powered Automation </a>
+                                    <a href="#" className="text-gray-400 transition hover:opacity-75"> AI-Powered Automation </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" className="text-gray-700 transition hover:opacity-75"> User Experience Design </a>
+                                    <a href="#" className="text-gray-400 transition hover:opacity-75"> User Experience Design </a>
                                 </li>
                             </ul>
                         </div>
 
                         <div className="col-span-2 sm:col-span-1">
-                            <p className="font-bold text-gray-900">Info</p>
+                            <p className="font-bold">Info</p>
 
                             <ul className="mt-6 space-y-4 text-sm">
                                 <li>
-                                    <a href="#" className="text-gray-700 transition hover:opacity-75"> FAQ </a>
+                                    <a href="#" className="text-gray-400 transition hover:opacity-75"> FAQ </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" className="text-gray-700 transition hover:opacity-75">Documentation </a>
+                                    <a href="#" className="text-gray-400 transition hover:opacity-75">Documentation </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" className="text-gray-700 transition hover:opacity-75"> Get in touch </a>
+                                    <a href="#" className="text-gray-400 transition hover:opacity-75"> Get in touch </a>
                                 </li>
                             </ul>
                         </div>
@@ -317,7 +317,6 @@ function App() {
                                 href="#"
                                 rel="noreferrer"
                                 target="_blank"
-                                className="text-black transition"
                             >
                                 <span className="sr-only">Facebook</span>
                                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -335,7 +334,6 @@ function App() {
                                 href="#"
                                 rel="noreferrer"
                                 target="_blank"
-                                className="text-black transition"
                             >
                                 <span className="sr-only">Instagram</span>
                                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -353,7 +351,7 @@ function App() {
                                 href="#"
                                 rel="noreferrer"
                                 target="_blank"
-                                className="text-black transition"
+                                className=""
                             >
                                 <span className="sr-only">Twitter</span>
                                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -369,7 +367,6 @@ function App() {
                                 href="#"
                                 rel="noreferrer"
                                 target="_blank"
-                                className="text-black transition"
                             >
                                 <span className="sr-only">GitHub</span>
                                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
