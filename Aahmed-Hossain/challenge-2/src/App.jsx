@@ -16,7 +16,6 @@ import {
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
@@ -34,47 +33,182 @@ const data = [
   {
     id: "m5gr84i9",
     status: "Canceled",
-    task: 'task-001',
-    title: 'If we program the card,',
-    level:'bug',
-    priority: 'High',
-    date: '05/05/2024'
+    task: "task-001",
+    title: "If we program the card,",
+    level: "bug",
+    priority: "High",
+    date: "05/05/2024",
   },
   {
     id: "3u1reuv4",
     status: "Todo",
-    task: 'task-002',
-    title: 'we can get to the IP capacitor through the haptic ',
-    level:'feature  ',
-    priority: 'Low',
-    date: '11/05/2024'
+    task: "task-002",
+    title: "we can get to the IP capacitor through the haptic ",
+    level: "feature  ",
+    priority: "Low",
+    date: "5/21/2024",
   },
   {
     id: "derv1ws0",
-    status: "Done",
-    task: 'task-003',
+    status: "✔️Done",
+    task: "task-003",
     title: "Generating the matrix won't do anything",
-    level:'documentation',
-    priority: 'Medium',
-    date: '10/05/2024'
+    level: "documentation",
+    priority: "Medium",
+    date: "6/05/2024",
   },
   {
     id: "5kma53ae",
     status: "success",
-    task: 'task-004',
+    task: "task-004",
     title: "we can get to the IP capacitor through the haptic",
-    level:'enhancement',
-    priority: 'High',
-    date: '8/05/2024'
+    level: "enhancement",
+    priority: "High",
+    date: "8/05/2024",
   },
   {
     id: "bhqecj4p",
     status: "Medium",
-    task: 'task-005',
+    task: "task-005",
     title: "We need to program the auxiliary API port!",
-    level:'documentation',
-    priority: 'High',
-    date: '7/05/2024'
+    level: "documentation",
+    priority: "High",
+    date: "3/05/2024",
+  },
+  {
+    id: "m5gr84i9",
+    status: "Canceled",
+    task: "task-001",
+    title: "If we program the card,",
+    level: "bug",
+    priority: "High",
+    date: "05/05/2024",
+  },
+  {
+    id: "3u1reuv4",
+    status: "Todo",
+    task: "task-002",
+    title: "we can get to the IP capacitor through the haptic ",
+    level: "feature  ",
+    priority: "Low",
+    date: "5/21/2024",
+  },
+  {
+    id: "derv1ws0",
+    status: "✔️Done",
+    task: "task-003",
+    title: "Generating the matrix won't do anything",
+    level: "documentation",
+    priority: "Medium",
+    date: "6/05/2024",
+  },
+  {
+    id: "5kma53ae",
+    status: "success",
+    task: "task-004",
+    title: "we can get to the IP capacitor through the haptic",
+    level: "enhancement",
+    priority: "High",
+    date: "8/05/2024",
+  },
+  {
+    id: "bhqecj4p",
+    status: "Medium",
+    task: "task-005",
+    title: "We need to program the auxiliary API port!",
+    level: "documentation",
+    priority: "High",
+    date: "3/05/2024",
+  },
+  {
+    id: "m5gr84i9",
+    status: "Canceled",
+    task: "task-001",
+    title: "If we program the card,",
+    level: "bug",
+    priority: "High",
+    date: "05/05/2024",
+  },
+  {
+    id: "3u1reuv4",
+    status: "Todo",
+    task: "task-002",
+    title: "we can get to the IP capacitor through the haptic ",
+    level: "feature  ",
+    priority: "Low",
+    date: "5/21/2024",
+  },
+  {
+    id: "derv1ws0",
+    status: "✔️Done",
+    task: "task-003",
+    title: "Generating the matrix won't do anything",
+    level: "documentation",
+    priority: "Medium",
+    date: "6/05/2024",
+  },
+  {
+    id: "5kma53ae",
+    status: "success",
+    task: "task-004",
+    title: "we can get to the IP capacitor through the haptic",
+    level: "enhancement",
+    priority: "High",
+    date: "8/05/2024",
+  },
+  {
+    id: "bhqecj4p",
+    status: "Medium",
+    task: "task-005",
+    title: "We need to program the auxiliary API port!",
+    level: "documentation",
+    priority: "High",
+    date: "3/05/2024",
+  },
+  {
+    id: "m5gr84i9",
+    status: "Canceled",
+    task: "task-001",
+    title: "If we program the card,",
+    level: "bug",
+    priority: "High",
+    date: "05/05/2024",
+  },
+  {
+    id: "3u1reuv4",
+    status: "Todo",
+    task: "task-002",
+    title: "we can get to the IP capacitor through the haptic ",
+    level: "feature  ",
+    priority: "Low",
+    date: "5/21/2024",
+  },
+  {
+    id: "derv1ws0",
+    status: "✔️Done",
+    task: "task-003",
+    title: "Generating the matrix won't do anything",
+    level: "documentation",
+    priority: "Medium",
+    date: "6/05/2024",
+  },
+  {
+    id: "5kma53ae",
+    status: "success",
+    task: "task-004",
+    title: "we can get to the IP capacitor through the haptic",
+    level: "enhancement",
+    priority: "High",
+    date: "8/05/2024",
+  },
+  {
+    id: "bhqecj4p",
+    status: "Medium",
+    task: "task-005",
+    title: "We need to program the auxiliary API port!",
+    level: "documentation",
+    priority: "High",
+    date: "3/05/2024",
   },
 ];
 
@@ -104,29 +238,35 @@ export const columns = [
   {
     accessorKey: "task",
     header: "Task",
-    cell: ({ row }) => (
-      <div className="uppercase">{row.getValue("task")}</div>
-    ),
+    cell: ({ row }) => <div className="uppercase">{row.getValue("task")}</div>,
   },
   {
     accessorKey: "level",
     header: "Level",
-    cell: ({ row }) => (
-      <div className="">{row.getValue("level")}</div>
-    ),
+    cell: ({ row }) => <span className="text-sm font-semibold py-[1px] px-2  border rounded-lg ">{row.getValue("level")}</span>,
   },
   {
     accessorKey: "title",
-    header: "Title",
-    cell: ({ row }) => (
-      <div className="uppercase">{row.getValue("title")}</div>
-    ),
+    header: ({ column }) => {
+      return (
+        <Button
+        className=""
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Title
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      );
+    },
+    cell: ({ row }) => <div className="text-sm font-semibold">{row.getValue("title")}</div>,
   },
   {
     accessorKey: "status",
     header: ({ column }) => {
       return (
         <Button
+        className="text-left"
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
@@ -136,7 +276,7 @@ export const columns = [
       );
     },
     cell: ({ row }) => (
-      <div className="uppercase">{row.getValue("status")}</div>
+      <div className="uppercase ">{row.getValue("status")}</div>
     ),
   },
   {
@@ -152,7 +292,9 @@ export const columns = [
         </Button>
       );
     },
-    cell: ({ row }) => <div className="capitalize">{row.getValue("priority")}</div>,
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("priority")}</div>
+    ),
   },
   {
     accessorKey: "date",
@@ -168,10 +310,9 @@ export const columns = [
       );
     },
     cell: ({ row }) => {
-      const date = row.getValue("date");
-      // Assuming 'date' is in the format "MM/DD/YYYY". You may need to parse it differently based on your actual format.
-      const formattedDate = new Date(date).toLocaleDateString("en-US");
-    
+      const date = new Date(row.getValue("date"));
+      const options = { month: "long", day: "numeric", year: "numeric" };
+      const formattedDate = date.toLocaleDateString("en-US", options);
       return <div className="text-center font-medium">{formattedDate}</div>;
     },
   },
@@ -179,7 +320,7 @@ export const columns = [
     id: "actions",
     enableHiding: false,
     cell: ({ row }) => {
-      const payment = row.original;
+      const task = row.original;
 
       return (
         <DropdownMenu>
@@ -192,7 +333,7 @@ export const columns = [
           <DropdownMenuContent align="end">
             {/* <DropdownMenuLabel>Actions</DropdownMenuLabel> */}
             <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(payment.id)}
+              onClick={() => navigator.clipboard.writeText(task.id)}
             >
               Edit
             </DropdownMenuItem>
@@ -207,6 +348,10 @@ export const columns = [
 ];
 
 export default function App() {
+  const [pagination, setPagination] = React.useState({
+    pageIndex: 0,
+    pageSize: 10,
+  });
   const [sorting, setSorting] = React.useState([]);
   const [columnFilters, setColumnFilters] = React.useState([]);
   const [columnVisibility, setColumnVisibility] = React.useState({});
@@ -223,7 +368,9 @@ export default function App() {
     getFilteredRowModel: getFilteredRowModel(),
     onColumnVisibilityChange: setColumnVisibility,
     onRowSelectionChange: setRowSelection,
+    onPaginationChange: setPagination,
     state: {
+      pagination,
       sorting,
       columnFilters,
       columnVisibility,
@@ -233,7 +380,7 @@ export default function App() {
 
   return (
     <div className="w-full">
-      <div className="flex items-center py-4">
+      <div className="flex items-center justify-between py-2">
         <Input
           placeholder="Filter task..."
           value={table.getColumn("title")?.getFilterValue() ?? ""}
@@ -242,10 +389,16 @@ export default function App() {
           }
           className="max-w-sm"
         />
+       <div className="flex gap-2">
+       <Button onClick={()=>console.log('clicked')} variant="outline" className="">
+       ✛ New Task
+            </Button>
         <DropdownMenu>
+
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="ml-auto">
-              Columns <ChevronDown className="ml-2 h-4 w-4" />
+          
+            <Button variant="outline" className="ml-auto py-1">
+              View <ChevronDown className="ml-2 h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
@@ -268,6 +421,7 @@ export default function App() {
               })}
           </DropdownMenuContent>
         </DropdownMenu>
+       </div>
       </div>
       <div className="rounded-md border ">
         <Table>
@@ -324,23 +478,64 @@ export default function App() {
           {table.getFilteredSelectedRowModel().rows.length} of{" "}
           {table.getFilteredRowModel().rows.length} row(s) selected.
         </div>
-        <div className="space-x-2">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => table.previousPage()}
-            disabled={!table.getCanPreviousPage()}
+        <div className="flex items-center gap-6">
+          {/* Rows numbers */}
+<div>
+<span className="text-sm font-semibold">Rows Per Page </span>
+          <select
+            className="p-1 border rounded-md text-sm font-semibold"
+            value={table.getState().pagination.pageSize}
+            onChange={(e) => {
+              table.setPageSize(Number(e.target.value));
+            }}
           >
-            Previous
-          </Button>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => table.nextPage()}
-            disabled={!table.getCanNextPage()}
-          >
-            Next
-          </Button>
+            {[10, 20, 30, 40, 50].map((pageSize) => (
+              <option key={pageSize} value={pageSize}>
+                 {pageSize}
+              </option>
+            ))}
+          </select>
+</div>
+          {/* page numbers */}
+          <span className="flex items-center gap-1">
+            <div className="text-sm font-semibold">Page</div>
+            <strong>
+              {table.getState().pagination.pageIndex + 1}{" "}
+              <span className="mr-1">of</span>
+              {table.getPageCount().toLocaleString()}
+            </strong>
+          </span>
+          {/* prev and next button */}
+          <div className="flex gap-2">
+            <button
+              className="border rounded p-1"
+              onClick={() => table.firstPage()}
+              disabled={!table.getCanPreviousPage()}
+            >
+              {"<<"}
+            </button>
+            <button
+              className="border rounded p-1"
+              onClick={() => table.previousPage()}
+              disabled={!table.getCanPreviousPage()}
+            >
+              {"<"}
+            </button>
+            <button
+              className="border rounded p-1"
+              onClick={() => table.nextPage()}
+              disabled={!table.getCanNextPage()}
+            >
+              {">"}
+            </button>
+            <button
+              className="border rounded p-1"
+              onClick={() => table.lastPage()}
+              disabled={!table.getCanNextPage()}
+            >
+              {">>"}
+            </button>
+          </div>
         </div>
       </div>
     </div>
