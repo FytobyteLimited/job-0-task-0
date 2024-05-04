@@ -70,7 +70,7 @@ function App() {
                     <h3 className='fade-text lg:w-full w-1/2 text-3xl font-bold max-w-lg'>Transform your tech business with tailored services</h3>
                     <p className='text-gray-400'>Websites / Applications / Web3 / Blockchain</p>
                 </div>
-                
+
                 <div className='max-w-4xl lg:p-0 p-10 mx-auto space-y-5 lg:mt-10'>
 
                     <div className="grid grid-cols-1 gap-3 lg:grid-cols-3 lg:gap-8">
@@ -96,7 +96,7 @@ function App() {
                                 business needs and goals.</p>
                         </div>
 
-                        <div className="h-52 w-40 lg:w-full mx-auto col-span-2 rounded-3xl p-5 bg-gradient-to-br from-[#e7a0ff9a] to-[#977cff6a]">
+                        <div className="h-52 w-40 lg:w-full mx-auto col-span-2 lg:col-span-1 rounded-3xl p-5 bg-gradient-to-br from-[#e7a0ff9a] to-[#977cff6a]">
                             <figure id='logo-code'></figure>
                             <p className='text-lg font-bold'>Custom Web Development</p>
                             <p className='text-[11px]'>SPA / MPA</p>
@@ -118,63 +118,63 @@ function App() {
                         unleashing seamless digital solutions</h3>
                     <p className='text-gray-400'>Innovative solutions for seamless digital transformation.</p>
                 </div>
-                <div className='max-w-4xl mx-auto space-y-5 mt-10'>
-                    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
-                        <div id='kb-badge' className="h-60 rounded-xl">
+                <div className='lg:max-w-4xl mx-auto lg:mt-5'>
+                    <div className="lg:grid flex flex-col lg:grid-cols-2 items-center gap-8 py-5 px-10 lg:p-0">
+                        <div id='kb-badge' className="h-full lg:w-full w-64 flex flex-col rounded-xl">
                             <img
                                 alt=""
                                 src="/public/card-1.png"
-                                className="h-64 w-full object-cover sm:h-80 lg:h-1/2 rounded-t-xl"
+                                className="h-32 w-full object-cover lg:h-1/2 rounded-t-xl"
                             />
-                            <div className='px-5 pt-2'>
-                                <h3 className="text-lg font-bold sm:text-xl">FYTOBYTE LIMITED</h3>
-                                <p className='font-bold'>Solutions</p>
-                                <p className="mt-2 text-xs">
+                            <div className='px-5 py-5'>
+                                <h3 className="lg:text-lg font-bold text-sm">FYTOBYTE LIMITED</h3>
+                                <p className="lg:text-base font-bold text-sm">Solutions</p>
+                                <p className="mt-2 text-xs line-clamp-2 lg:line-clamp-none">
                                     A comprehensive business service app offering efficient solutions for seamless operations
                                     and growth.
                                 </p>
                             </div>
                         </div>
-                        <div id='kb-badge' className="h-60 rounded-xl">
+                        <div id='kb-badge' className="h-full lg:w-full w-64 flex flex-col rounded-xl">
                             <img
                                 alt=""
                                 src="/public/card-2.png"
-                                className="h-64 w-full object-cover sm:h-80 lg:h-1/2 rounded-t-xl"
+                                className="h-32 w-full object-cover lg:h-1/2 rounded-t-xl"
                             />
-                            <div className='px-5 pt-2'>
+                            <div className='px-5 py-5'>
                                 <h3 className="text-lg font-bold sm:text-xl">FYTOBYTE LIMITED</h3>
-                                <p className='font-bold'>Innovate</p>
-                                <p className="mt-2 text-xs ">
+                                <p className='lg:text-base font-bold text-sm'>Innovate</p>
+                                <p className="mt-2 text-xs line-clamp-2 lg:line-clamp-none">
                                     A comprehensive business service app offering efficient solutions for seamless operations
                                     and growth.
                                 </p>
                             </div>
                         </div>
-                        <div id='kb-badge' className="h-60 rounded-xl">
+                        <div id='kb-badge' className="h-full lg:w-full w-64 flex flex-col rounded-xl">
                             <img
                                 alt=""
                                 src="/public/card-3.png"
-                                className="h-64 w-full object-cover sm:h-80 lg:h-1/2 rounded-t-xl"
+                                className="h-32 w-full object-cover lg:h-1/2 rounded-t-xl"
                             />
-                            <div className='px-5 pt-2'>
+                            <div className='px-5 py-5'>
                                 <h3 className="text-lg font-bold sm:text-xl">FYTOBYTE LIMITED</h3>
-                                <p className='font-bold'>Connect</p>
-                                <p className="mt-2 text-xs">
+                                <p className='lg:text-base font-bold text-sm'>Connect</p>
+                                <p className="mt-2 text-xs line-clamp-2 lg:line-clamp-none">
                                     A comprehensive business service app offering efficient solutions for seamless operations
                                     and growth.
                                 </p>
                             </div>
                         </div>
-                        <div id='kb-badge' className="h-60 rounded-xl">
+                        <div id='kb-badge' className="h-full lg:w-full w-64 flex flex-col rounded-xl">
                             <img
                                 alt=""
                                 src="/public/card-4.png"
-                                className="h-64 w-full object-cover sm:h-80 lg:h-1/2 rounded-t-xl"
+                                className="h-32 w-full object-cover lg:h-1/2 rounded-t-xl"
                             />
-                            <div className='px-5 pt-2'>
+                            <div className='px-5 py-5'>
                                 <h3 className="text-lg font-bold sm:text-xl">FYTOBYTE LIMITED</h3>
-                                <p className='font-bold'>Sphere</p>
-                                <p className="mt-2 text-xs">
+                                <p className='lg:text-base font-bold text-sm'>Sphere</p>
+                                <p className="mt-2 text-xs line-clamp-2 lg:line-clamp-none">
                                     A comprehensive business service app offering efficient solutions for seamless operations
                                     and growth.
                                 </p>
@@ -194,20 +194,20 @@ function App() {
                     <h3 className='fade-text lg:w-full w-1/2 text-3xl font-bold max-w-lg'>FAQ & Documentation</h3>
                     <p className='text-gray-400 w-96'>FYTOBYTE LIMITED provides customers complete entry to knowledge base API and documentation.</p>
                 </div>
-                <div className='max-w-4xl mx-auto space-y-5 mt-10'>
-                    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
-                        <div id='badge-card' className="h-72 rounded-3xl">
+                <div className='max-w-4xl mx-auto mt-5'>
+                    <div className="flex flex-col items-center gap-4 lg:grid lg:grid-cols-2 lg:gap-8">
+                        <div className="h-64 w-1/2 lg:w-full">
                             <img
                                 alt=""
-                                src="/public/robot.png"
-                                className="h-full w-full object-cover rounded-3xl"
+                                src="/public/robot-2.png"
+                                className="lg:h-full h-64 lg:w-full object-cover rounded-3xl"
                             />
                         </div>
-                        <div className="h-60 rounded-xl">
-                            <div id='badge-card' className="h-72 col-span-1 rounded-3xl p-5">
+                        <div className="h-fit w-1/2 lg:w-full rounded-xl">
+                            <div id='badge-card' className="col-span-1 rounded-3xl px-5 py-7">
                                 <FaPiedPiper className='text-4xl' />
-                                <p className='text-lg font-bold'>Full API ACCESS</p>
-                                <p className='text-xs mt-5'>Sign up and access our intuitive platform. Upload your data , then customize preferences. Our robust tools analyze and generate insights promptly. Collaborate seamlessly with team members using integrated communication features. Watch your operations optimize as our app streamlines workflows and drives efficiency for your success.</p>
+                                <p className='lg:text-lg font-bold'>Full API ACCESS</p>
+                                <p className='text-xs mt-5 line-clamp-4 lg:line-clamp-none'>Sign up and access our intuitive platform. Upload your data , then customize preferences. Our robust tools analyze and generate insights promptly. Collaborate seamlessly with team members using integrated communication features. Watch your operations optimize as our app streamlines workflows and drives efficiency for your success.</p>
                                 <button className='faq-btn px-3 py-1'>Learn More</button>
                             </div>
                         </div>
@@ -226,34 +226,31 @@ function App() {
                     <p className='text-gray-400 w-96'>We share essential insights from the technology sector, AI,
                         and the world of software development.</p>
                 </div>
-                <div className='max-w-4xl mx-auto space-y-5 mt-10'>
-                    <div className="grid grid-cols-1 h-72 rounded-xl">
-                        <div id='badge-card' className="h-72 rounded-2xl flex">
-                            <div className="w-1/2 p-5">
-                                <p className='text-md font-bold'>Unveiling the Art of Web Design: A Step-by-Step Guide</p>
-                                <p className='text-xs mt-5'>In the ever-evolving digital landscape, a visually appealing
-                                    anduser-friendly website is crucial for success. Whether you&rsquo;re aseasoned designer or a novice looking to dip your toes into the world of web design, this step-by-
-                                    step guide will help you create a stunning and effective…</p>
-                                <button className='faq-btn px-3 py-1'>Learn More</button>
-                            </div>
-                            <img
-                                alt=""
-                                src="/public/blog.png"
-                                className="h-full w-full object-cover rounded-2xl"
-                            />
+                <div className='max-w-4xl mx-auto space-y-5 mt-10 grid grid-cols-1 rounded-xl lg:p-0 px-6'>
+                    <div id='badge-card' className="h-72 rounded-2xl flex">
+                        <div className="lg:w-1/2 w-1/2 px-5 py-3 lg:p-5">
+                            <p className='text-md font-bold'>Unveiling the Art of Web Design: A Step-by-Step Guide</p>
+                            <p className='text-xs mt-5 line-clamp-5 lg:line-clamp-none'>In the ever-evolving digital landscape, a visually appealing
+                                anduser-friendly website is crucial for success. Whether you&rsquo;re aseasoned designer or a novice looking to dip your toes into the world of web design, this step-by-
+                                step guide will help you create a stunning and effective…</p>
+                            <button className='faq-btn px-3 py-1'>Learn More</button>
                         </div>
+                        <img
+                            alt=""
+                            src="/public/blog.png"
+                            className="lg:h-full lg:w-full w-[220px] object-cover rounded-2xl"
+                        />
                     </div>
-
                 </div>
             </div>
             {/* footer */}
             <footer className="">
-                <div className="mx-auto max-w-5xl p-5 px-20">
-                    <div className="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-14 lg:mt-0">
-                        <div className="col-span-2 sm:col-span-1">
-                            <p className="font-bold">Explore</p>
+                <div className="mx-auto max-w-5xl p-5 lg:px-20">
+                    <div className="mt-8 flex lg:grid lg:grid-cols-4 gap-14 lg:mt-0">
+                        <div className="col-span-1">
+                            <p className="font-bold text-sm lg:text-base">Explore</p>
 
-                            <ul className="mt-6 space-y-4 text-sm">
+                            <ul className="hidden lg:block mt-6 space-y-4 text-sm">
                                 <li>
                                     <a href="#" className="text-gray-400 transition hover:opacity-75">About FYTOBYTE LIMITED</a>
                                 </li>
@@ -268,10 +265,10 @@ function App() {
                             </ul>
                         </div>
 
-                        <div className="col-span-2 sm:col-span-1">
-                            <p className="font-bold">Expertise</p>
+                        <div className="col-span-1">
+                            <p className="font-bold text-sm lg:text-base">Expertise</p>
 
-                            <ul className="mt-6 space-y-4 text-sm">
+                            <ul className="hidden lg:block mt-6 space-y-4 text-sm">
                                 <li>
                                     <a href="#" className="text-gray-400 transition hover:opacity-75"> Cloud Integration Solutions </a>
                                 </li>
@@ -286,10 +283,10 @@ function App() {
                             </ul>
                         </div>
 
-                        <div className="col-span-2 sm:col-span-1">
-                            <p className="font-bold">Services</p>
+                        <div className="col-span-1">
+                            <p className="font-bold text-sm lg:text-base">Services</p>
 
-                            <ul className="mt-6 space-y-4 text-sm">
+                            <ul className="hidden lg:block mt-6 space-y-4 text-sm">
                                 <li>
                                     <a href="#" className="text-gray-400 transition hover:opacity-75"> Cybersecurity & Compliance </a>
                                 </li>
@@ -304,10 +301,10 @@ function App() {
                             </ul>
                         </div>
 
-                        <div className="col-span-2 sm:col-span-1">
-                            <p className="font-bold">Info</p>
+                        <div className="col-span-1">
+                            <p className="font-bold text-sm lg:text-base">Info</p>
 
-                            <ul className="mt-6 space-y-4 text-sm">
+                            <ul className="hidden lg:block mt-6 space-y-4 text-sm">
                                 <li>
                                     <a href="#" className="text-gray-400 transition hover:opacity-75"> FAQ </a>
                                 </li>
