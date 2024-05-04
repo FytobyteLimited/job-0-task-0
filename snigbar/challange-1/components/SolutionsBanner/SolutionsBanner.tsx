@@ -9,7 +9,7 @@ const SolutionsBanner = ({
 }) => {
   return (
     <div
-      className={`flex flex-col justify-between items-start border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden`}
+      className={`flex flex-col justify-between items-start border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden`}
     >
       <div className="w-full h-full md:h-[250px] rounded-t-3xl overflow-hidden">
         <Image

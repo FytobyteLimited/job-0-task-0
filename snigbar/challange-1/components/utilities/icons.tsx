@@ -109,7 +109,7 @@ export function SunIcon() {
       height="35"
       fill="none"
       viewBox="0 0 45 35"
-      className="w-6 h-6"
+      className="w-8 h-8"
     >
       <path
         fill={resolvedTheme === "dark" ? "white" : "black"}
@@ -128,7 +128,7 @@ export function CodeIcon() {
       height="41"
       fill="none"
       viewBox="0 0 40 41"
-      className="w-6 h-6"
+      className="w-8 h-8"
     >
       <g clipPath="url(#clip0_3_316)">
         <path
@@ -175,6 +175,25 @@ export function BookIcon() {
           ></path>
         </clipPath>
       </defs>
+    </svg>
+  );
+}
+
+export function ApiIcon() {
+  const { resolvedTheme } = useTheme();
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="44"
+      height="46"
+      fill="none"
+      viewBox="0 0 44 46"
+      className="w-8 h-8"
+    >
+      <path
+        fill={resolvedTheme === "dark" ? "white" : "black"}
+        d="M42.087.766c-2.608.664-6.654 2.782-11.19 6.588A20.118 20.118 0 0021 4.75C9.782 4.75.687 13.844.687 25.063.688 36.28 9.783 45.374 21 45.374c11.218 0 20.313-9.095 20.313-20.313a20.24 20.24 0 00-5.738-14.141 15.172 15.172 0 00-1.66 2.676 17.203 17.203 0 014.38 11.466c0 9.537-7.758 17.295-17.294 17.295-3.003 0-5.954-.788-8.558-2.285 8.1-10.481 14.726-3.688 18-22.134.565-3.185 2.734-9.205 12.326-15.642.79-.53.238-1.766-.682-1.531zM9.77 38.188a17.252 17.252 0 01-6.065-13.126c0-9.537 7.759-17.294 17.295-17.294A16.992 16.992 0 0128.483 9.5C22.04 15.566 16.095 24.43 9.77 38.187z"
+      ></path>
     </svg>
   );
 }

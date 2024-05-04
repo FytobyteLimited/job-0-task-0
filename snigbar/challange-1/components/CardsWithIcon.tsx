@@ -25,7 +25,7 @@ const CardsWithIcon = ({
       <p className="text-sm font-light mt-1">{subHeadingTwo}</p>
 
       {learnMore && (
-        <button className="w-24 md:w-40 h-10 bg-primary-dark dark:bg-white rounded-md text-white dark:text-primary-dark font-light text-sm text-center">
+        <button className="w-24 md:w-40 h-10 bg-primary-dark dark:bg-white rounded-md text-white dark:text-primary-dark font-light text-sm text-center mx-auto md:mx-0">
           Learn More
         </button>
       )}
