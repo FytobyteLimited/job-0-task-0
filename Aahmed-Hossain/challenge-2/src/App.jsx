@@ -20,14 +20,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
+import {  Table, TableBody,TableCell,TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Dialog, DialogContent } from "@radix-ui/react-dialog";
 
 const data = [
   {
@@ -41,7 +38,7 @@ const data = [
   },
   {
     id: "3u1reuv4",
-    status: "Todo",
+    status: "✔ Todo",
     task: "task-002",
     title: "we can get to the IP capacitor through the haptic ",
     level: "feature  ",
@@ -185,7 +182,7 @@ const data = [
   },
   {
     id: "derv1ws0",
-    status: "✔️Done",
+    status: "✔ Done",
     task: "task-003",
     title: "Generating the matrix won't do anything",
     level: "documentation",
@@ -347,7 +344,13 @@ export const columns = [
   },
 ];
 
+
 export default function App() {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+ 
+  const handleShowDialog = () => {
+    setIsModalOpen(true);
+  }
   const [pagination, setPagination] = React.useState({
     pageIndex: 0,
     pageSize: 10,
@@ -390,8 +393,11 @@ export default function App() {
           className="max-w-sm"
         />
        <div className="flex gap-2">
-       <Button onClick={()=>console.log('clicked')} variant="outline" className="">
-       ✛ New Task
+       <Button onClick={handleShowDialog} variant="outline" className="">
+       ✛ New Task <Dialog>
+
+       <DialogContent/>
+       </Dialog>
             </Button>
         <DropdownMenu>
 
