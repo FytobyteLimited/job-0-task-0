@@ -1,7 +1,10 @@
 import Image from "next/image";
 const Header = () => {
   return (
-    <div className="w-full h-[110vh] md:bg-header-background bg-no-repeat bg-cover mx-auto -z-20">
+    <div
+      className="w-full h-[110vh] md:bg-header-background bg-no-repeat bg-cover mx-auto -z-20"
+      id="home"
+    >
       {/* header contents */}
       <div className="flex flex-col items-center justify-center text-center gap-4 h-full mx-auto w-4/5 lg:w-3/5 z-40 mt-4 md:mt-0">
         {/* heading */}

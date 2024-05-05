@@ -2,7 +2,7 @@ interface Props {
   Icon: React.FC;
   heading: string;
   subHeadingOne: string;
-  subHeadingTwo: string;
+  subHeadingTwo?: string;
   learnMore: boolean;
   style?: string;
 }
@@ -22,7 +22,9 @@ const CardsWithIcon = ({
 
       <h1 className="font-semibold">{heading}</h1>
       <p className="text-sm font-light">{subHeadingOne}</p>
-      <p className="text-sm font-light mt-1">{subHeadingTwo}</p>
+      {subHeadingTwo && (
+        <p className="text-sm font-light mt-1">{subHeadingTwo}</p>
+      )}
 
       {learnMore && (
         <button className="w-24 md:w-40 h-10 bg-primary-dark dark:bg-white rounded-md text-white dark:text-primary-dark font-light text-sm text-center mx-auto md:mx-0">

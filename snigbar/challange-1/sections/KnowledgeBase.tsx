@@ -6,7 +6,10 @@ import Image from "next/image";
 
 const KnowledgeBase = () => {
   return (
-    <div className="w-full flex justify-center items-center flex-col gap-4 my-4">
+    <div
+      className="w-full flex justify-center items-center flex-col gap-4 my-4"
+      id="faq"
+    >
       <IconButtons Icon={BookIcon} text="Knowledge Base" />
       <SectionHeading
         heading="FAQ & Documentation"
@@ -15,7 +18,7 @@ const KnowledgeBase = () => {
       />
       {/* image and card */}
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
-        <div className="h-full md:h-[250px] rounded-3xl overflow-hidden">
+        <div className="w-full h-full md:h-[250px] rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800">
           <Image
             src="/robot.png"
             alt="services-image"

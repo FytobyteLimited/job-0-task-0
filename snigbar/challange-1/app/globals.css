@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  scroll-behavior: smooth;
+}
 .gradient-text {
   background-image: linear-gradient(to right, black 60%, #e7e7e7);
   color: transparent;

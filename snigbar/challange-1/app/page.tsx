@@ -1,5 +1,6 @@
 import Header from "@/components/Header/Header";
 import KnowledgeBase from "@/sections/KnowledgeBase";
+import OurBlogAndNews from "@/sections/OurBlogAndNews";
 import { OurServices } from "@/sections/OurServices";
 import OurSolutions from "@/sections/OurSolutions";
 
@@ -15,6 +16,7 @@ export default function Home() {
         <OurServices />
         <OurSolutions />
         <KnowledgeBase />
+        <OurBlogAndNews />
       </main>
     </div>
   );

@@ -7,7 +7,10 @@ import React from "react";
 
 const OurSolutions = () => {
   return (
-    <div className="w-full flex justify-center items-center flex-col gap-4 my-8">
+    <div
+      className="w-full flex justify-center items-center flex-col gap-4 my-8"
+      id="solution"
+    >
       <IconButtons Icon={UmbrellaIcon} text="Our Solution" />
       <SectionHeading
         heading="Streamlining operations,
