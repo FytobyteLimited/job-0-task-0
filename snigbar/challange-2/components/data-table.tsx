@@ -58,6 +58,7 @@ export function DataTable<TData, TValue>({
     },
   });
 
+  console.log(table.getRowModel().rows.map((val) => val.original));
   return (
     <div>
       <DataTableMenubar table={table} />
