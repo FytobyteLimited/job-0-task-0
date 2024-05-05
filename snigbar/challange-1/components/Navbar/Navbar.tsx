@@ -1,33 +1,55 @@
+"use client";
 import ThemeSwitch from "../ThemeSwitch";
 import Link from "next/link";
-import { navLinkStyle } from "@/shared/constants";
 import LogoImage from "../utilities/LogoImage";
 import MobileMenuButton from "../utilities/MobileMenuButton";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const navlinksStyle =
+    "border-b border-b-transparent hover:border-b-primary-blue dark:hover:border-b-white";
+
   return (
-    <nav className="z-50 mx-auto flex items-center justify-between px-4 py-2 md:px-8 md:py-3 text-white md:rounded-full md:bg-white/25 w-full md:w-11/12 lg:w-2/3 fixed top-4 backdrop-blur-md">
+    <nav
+      className={`z-50 mx-auto flex items-center justify-between px-4 py-2 md:px-8 md:py-3 text-white md:rounded-full ${
+        scrollY > 350 ? "bg-white shadow-md dark:bg-white/40" : "md:bg-white/25"
+      } w-full md:w-11/12 lg:w-2/3 fixed md:top-4 backdrop-blur-md`}
+    >
       <LogoImage />
       <ul className="hidden md:flex items-center justify-between gap-4 text-primary-blue dark:text-white text-[15px]">
-        <Link href="#home" className={navLinkStyle}>
+        <Link href="/#home" className={navlinksStyle}>
           Home
         </Link>
-        <Link href="#services" className={navLinkStyle}>
+        <Link href="/#services" className={navlinksStyle}>
           Services
         </Link>
-        <Link href="#solution" className={navLinkStyle}>
+        <Link href="/#solution" className={navlinksStyle}>
           Solution
         </Link>
-        <Link href="#faq" className={navLinkStyle}>
+        <Link href="/#faq" className={navlinksStyle}>
           FAQ
         </Link>
-        <Link href="about" className={navLinkStyle}>
+        <Link href="about" className={navlinksStyle}>
           About
         </Link>
-        <Link href="#knowledge" className={navLinkStyle}>
+        <Link href="/#knowledge" className={navlinksStyle}>
           Blog
         </Link>
-        <Link href="#" className={navLinkStyle}>
+        <Link href="contact" className={navlinksStyle}>
           Contact Us
         </Link>
       </ul>

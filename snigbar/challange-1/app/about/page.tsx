@@ -5,9 +5,9 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className="w-full flex justify-center items-center flex-col gap-4 py-8 my-20">
+    <div className="w-full flex flex-col justify-center items-center  gap-4 py-8 my-20">
       <div className="text-center space-y-6 w-11/12 md:w-3/5">
-        <h1 className="text-5xl">About Us</h1>
+        <h1 className="text-3xl md:text-5xl">About Us</h1>
         <p className="text-lg font-light w-4/5 mx-auto">
           Watch your operations optimize as our apps streamline workflows and
           drives efficiency for your success.

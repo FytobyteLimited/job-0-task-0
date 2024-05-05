@@ -20,10 +20,10 @@ const Header = () => {
         </p>
         {/* cta buttons */}
         <div className="flex justify-between items-center gap-3">
-          <button className="w-24 md:w-40 h-10 bg-primary-dark dark:bg-white rounded-md text-white dark:text-primary-dark font-light text-sm text-center">
+          <button className="w-24 md:w-40 h-10 bg-primary-dark dark:bg-white rounded-md text-white dark:text-primary-dark text-sm text-center">
             Get Started
           </button>
-          <button className="w-24 md:w-40 h-10 bg-primary-dark dark:bg-white rounded-md text-white dark:text-primary-dark font-light text-sm text-center">
+          <button className="w-24 md:w-40 h-10 bg-primary-dark dark:bg-white rounded-md text-white dark:text-primary-dark text-sm text-center">
             Join Us
           </button>
         </div>
