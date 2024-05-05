@@ -32,15 +32,21 @@ export const columns: ColumnDef<Tasks>[] = [
   },
   {
     accessorKey: "status",
-    header: "Status",
+    header: ({ column }) => {
+      return <DataTableColumnHeader column={column} title="Status" />;
+    },
   },
   {
     accessorKey: "priority",
-    header: "Priority",
+    header: ({ column }) => {
+      return <DataTableColumnHeader column={column} title="Priority" />;
+    },
   },
   {
     accessorKey: "createdAt",
-    header: "CreatedAt",
+    header: ({ column }) => {
+      return <DataTableColumnHeader column={column} title="CreatedAt" />;
+    },
     cell: ({ row }) => {
       const date = new Date(row.getValue("createdAt")).toLocaleDateString();
       return <div>{date}</div>;
