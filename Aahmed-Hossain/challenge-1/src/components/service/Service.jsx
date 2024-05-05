@@ -26,7 +26,7 @@ const Service = () => {
           <h3>
             <BsCloudSun />
           </h3>
-          <h4 className="font-bold tet-xl dark:text-white">Lorem Ipsum</h4>
+          <h4 className="font-bold tet-xl ">Lorem Ipsum</h4>
           <p className="text-xs">Create Fast And Simple</p>
           <p className="text-xs mt-2">
             Lorem ipsum dolor sit amet... consectetur adipisicing elit. Sit, eos
@@ -64,7 +64,7 @@ const Service = () => {
               <h3>
                 <LuCode2 />
               </h3>
-              <h4 className="font-bold tet-xl dark:text-white">
+              <h4 className="font-bold tet-xl ">
                 Custom Web Development
               </h4>
               <p className="text-xs">SPA / MPA</p>
@@ -80,7 +80,7 @@ const Service = () => {
             <h3>
               <LuCode2 />
             </h3>
-            <h4 className="font-bold tet-xl dark:text-white">
+            <h4 className="font-bold tet-xl ">
               Custom Web Development{" "}
             </h4>
             <p className="text-xs">SPA / MPA</p>
