@@ -10,9 +10,9 @@ import About from "@/components/about/About";
 
 export default function Home() {
   return (
-    <main className="bg-white dark:bg-black">
-      {/* <Banner /> */}
+    <main className="">
       <div className=" w-11/12 lg:w-10/12 mx-auto  ">
+      <Banner/>
       <Service/>
       <Solution/>
       <Faq/>
@@ -20,8 +20,6 @@ export default function Home() {
       <Contact/>
       <About/>
       <Footer/>
-      
-
       </div>
     </main>
   );

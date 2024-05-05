@@ -1,15 +1,17 @@
-import ButtonRounded from "@/shared/ButtonRounded";
-import TextGradiant from "@/shared/TextGradiant";
+
 import Image from "next/image";
 import React from "react";
 import blogImg from "../../../public/images/blog.png";
 import { IoNewspaperOutline } from "react-icons/io5";
+import ButtonRounded from "../ui/ButtonRounded";
+import TextGradiant from "../ui/TextGradiant";
 
 const Blog = () => {
+
   return (
     <div className="mb-16">
       <div className="flex flex-col justify-center items-center gap-4">
-        <ButtonRounded text="Tech News" Icon={IoNewspaperOutline} />
+        <ButtonRounded text="Tech News" icon={<IoNewspaperOutline/>} />
         <TextGradiant text="Our Blog & News" />
 
         <p className="text-normal lg:text-lg text-[#737373] text-center mb-6">

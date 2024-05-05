@@ -2,14 +2,14 @@ import React from "react";
 import Image from "next/image";
 import { solutionData } from "@/data/data";
 import { IoMdUmbrella } from "react-icons/io";
-import ButtonRounded from "@/shared/ButtonRounded";
-import TextGradiant from "@/shared/TextGradiant";
+import ButtonRounded from "../ui/ButtonRounded";
+import TextGradiant from "../ui/TextGradiant";
 
 const Solution = () => {
   return (
     <div className="mt-24">
       <div className="flex justify-center my-6">
-        <ButtonRounded text="Our Solution" Icon={IoMdUmbrella} />
+        <ButtonRounded text="Our Solution" icon={<IoMdUmbrella/>} />
       </div>
       <div>
         <TextGradiant

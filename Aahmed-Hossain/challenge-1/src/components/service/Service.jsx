@@ -6,16 +6,13 @@ import { LuCode2 } from "react-icons/lu";
 import Image from "next/image";
 import service1 from "../../../public/images/service-1.png";
 import service2 from "../../../public/images/service-2.png";
-import ButtonRounded from "@/shared/ButtonRounded";
-import TextGradiant from "@/shared/TextGradiant";
-{
-  /* <LuCode2 /> */
-}
+import TextGradiant from "../ui/TextGradiant";
+import ButtonRounded from "../ui/ButtonRounded";
 const Service = () => {
   return (
     <div className="  mt-4">
       <div className="flex flex-col justify-center items-center gap-4">
-        <ButtonRounded text="Our Service" Icon={TbSettingsCog} />
+        <ButtonRounded text="Our Service" icon={<TbSettingsCog/>} />
         <TextGradiant text="Transform your tech <br /> business with tailored <br /> services"/>
 
         <p className="text-normal lg:text-lg text-[#737373] text-center mb-6">

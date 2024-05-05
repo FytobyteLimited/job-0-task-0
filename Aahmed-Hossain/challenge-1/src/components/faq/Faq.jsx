@@ -1,18 +1,21 @@
-import Button from "@/shared/Button";
-import ButtonRounded from "@/shared/ButtonRounded";
-import TextGradiant from "@/shared/TextGradiant";
+
 import React from "react";
 import { SiKnowledgebase } from "react-icons/si";
 import { FaPiedPiper } from "react-icons/fa";
 import Image  from 'next/image';
 import faq from '../../../public/images/faq.png'
+import ButtonRounded from "../ui/ButtonRounded";
+import TextGradiant from "../ui/TextGradiant";
+// import { ButtonRounded } from '@/components/ui/ButtonRounded';
+// import { TextGradiant } from '@/components/ui/TextGradiant';
+
 
 
 const Faq = () => {
   return (
     <div className="my-16">
          <div className="flex justify-center my-6">
-      <ButtonRounded text="Knowledge Base" Icon={SiKnowledgebase} />
+      <ButtonRounded text="Knowledge Base" icon={<SiKnowledgebase/>} />
        </div>
       <TextGradiant text="FAQ & Documentation" />
       <p className="text-normal lg:text-lg text-[#737373] text-center mt-2 mb-6">
