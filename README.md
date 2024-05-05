@@ -10,7 +10,8 @@ Landing Page xl device(1440px):
 
 Landing Page mobile device : 
 
-![Uploading landing page mobile.png…]()
+![landing page mobile](https://github.com/Aahmed-Hossain/Fytobyte/assets/138388233/626b8440-1e2d-4b5e-9db8-7b00333efa43)
+
 
 
 About Page: 
