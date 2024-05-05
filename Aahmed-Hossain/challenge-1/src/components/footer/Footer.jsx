@@ -1,6 +1,6 @@
 import { footerInfo } from '@/data/data'
 import React from 'react'
-import footerLogoImg from '../../../public/images/logo.jpg'
+import footerLogoImg from '../../../public/images/logo.png'
 import Image from 'next/image'
 import { SiMedium } from "react-icons/si";
 import { IoLogoTwitter } from 'react-icons/io';

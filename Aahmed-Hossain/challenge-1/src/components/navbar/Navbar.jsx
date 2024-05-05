@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React from "react";
 import Image from "next/image";
 import { FaMoon } from "react-icons/fa";
@@ -13,12 +13,14 @@ const Navbar = ({ dark, setDark }) => {
     setDark((prevDark) => !prevDark);
   };
   const pathName = usePathname();
-  const mode = "dark";
   return (
     <div className="navbar relative backdrop-blur-xl rounded-full flex justify-between items-center p-2 z-50">
       <div className="navbar-start">
         <div>
-          <Image className='w-[140px]' src={logo} alt="logo" />
+        <Link href="/">
+              
+          <Image className='w-[120px] lg:w-[140px]' src={logo} alt="logo" />
+           </Link>
         </div>
         <div className="dropdown absolute right-[5vw]">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -38,21 +40,13 @@ const Navbar = ({ dark, setDark }) => {
             </svg>
           </div>
           <ul className="menu menu-sm dropdown-content mt-3 me-6 z-[1] p-2 shadow bg-base-100 rounded-box w-auto">
-            <Link
+          <Link
               href="/"
               className={`text-[#224192] text-xl m-2 ${
                 pathName === "/" ? "border-b-2 border-b-[#224192]" : ""
               }`}
             >
               Home
-            </Link>
-            <Link
-              href="/contact"
-              className={`text-[#224192] text-xl m-2 ${
-                pathName === "/contact" ? " border-b-2 border-b-[#224192]" : ""
-              }`}
-            >
-              Contact
             </Link>
             <Link
               href="/about"
@@ -63,6 +57,14 @@ const Navbar = ({ dark, setDark }) => {
               About
             </Link>
             <Link
+              href="/contact"
+              className={`text-[#224192] text-xl m-2 ${
+                pathName === "/contact" ? " border-b-2 border-b-[#224192]" : ""
+              }`}
+            >
+              Contact
+            </Link>
+            <Link
               href="/blog"
               className={`text-[#224192] text-xl m-2 ${
                 pathName === "/blog" ? "border-b-2 border-b-[#224192]" : ""
@@ -70,47 +72,63 @@ const Navbar = ({ dark, setDark }) => {
             >
               Blog
             </Link>
+            <Link
+              href="/service"
+              className={`text-[#224192] text-xl m-2 ${
+                pathName === "/service" ? "border-b-2 border-b-[#224192]" : ""
+              }`}
+            >
+              Service
+            </Link>
           </ul>
         </div>
       </div>
-      <div className="navbar-center hidden lg:flex absolute lg:left-[30vw]">
+      <div className="navbar-center hidden lg:flex absolute lg:left-[25vw]">
         <ul className="menu menu-horizontal px-1">
-          <Link
-            href="/"
-            className={`text-[#224192] text-xl m-2 ${
-              pathName === "/" ? "border-b-2 border-b-[#224192]" : ""
-            }`}
-          >
-            Home
-          </Link>
-          <Link
-            href="/contact"
-            className={`text-[#224192] text-xl m-2 ${
-              pathName === "/contact" ? " border-b-2 border-b-[#224192]" : ""
-            }`}
-          >
-            Contact
-          </Link>
-          <Link
-            href="/about"
-            className={`text-[#224192] text-xl m-2 ${
-              pathName === "/about" ? " border-b-2 border-b-[#224192]" : ""
-            }`}
-          >
-            About
-          </Link>
-          <Link
-            href="/blog"
-            className={`text-[#224192] text-xl m-2 ${
-              pathName === "/blog" ? "border-b-2 border-b-[#224192]" : ""
-            }`}
-          >
-            Blog
-          </Link>
+        <Link
+              href="/"
+              className={`text-[#224192] text-xl m-2 ${
+                pathName === "/" ? "border-b-2 border-b-[#224192]" : ""
+              }`}
+            >
+              Home
+            </Link>
+            <Link
+              href="/about"
+              className={`text-[#224192] text-xl m-2 ${
+                pathName === "/about" ? " border-b-2 border-b-[#224192]" : ""
+              }`}
+            >
+              About
+            </Link>
+            <Link
+              href="/contact"
+              className={`text-[#224192] text-xl m-2 ${
+                pathName === "/contact" ? " border-b-2 border-b-[#224192]" : ""
+              }`}
+            >
+              Contact
+            </Link>
+            <Link
+              href="/blog"
+              className={`text-[#224192] text-xl m-2 ${
+                pathName === "/blog" ? "border-b-2 border-b-[#224192]" : ""
+              }`}
+            >
+              Blog
+            </Link>
+            <Link
+              href="/service"
+              className={`text-[#224192] text-xl m-2 ${
+                pathName === "/service" ? "border-b-2 border-b-[#224192]" : ""
+              }`}
+            >
+              Service
+            </Link>
         </ul>
       </div>
       
-      <div className="navbar-end flex items-center absolute lg:right-[2vw] right-[20vw]">
+      <div className="navbar-end flex items-center absolute lg:right-[1vw] right-[20vw]">
       <button className='bg-black  rounded-full text-white py-1 px-2 text-sm mr-2'>
         <span className="hidden lg:block ">Talk with Us</span>
         <span className="visible lg:hidden">Sign Up</span>

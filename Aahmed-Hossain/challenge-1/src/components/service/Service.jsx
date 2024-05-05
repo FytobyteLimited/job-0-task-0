@@ -10,7 +10,7 @@ import TextGradiant from "../ui/TextGradiant";
 import ButtonRounded from "../ui/ButtonRounded";
 const Service = () => {
   return (
-    <div className="  mt-4">
+    <div className="">
       <div className="flex flex-col justify-center items-center gap-4">
         <ButtonRounded text="Our Service" icon={<TbSettingsCog/>} />
         <TextGradiant text="Transform your tech <br /> business with tailored <br /> services"/>

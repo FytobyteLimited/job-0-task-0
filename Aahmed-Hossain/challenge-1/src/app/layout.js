@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
             dark ? "text-white bg-black" : "text-black bg-white"
           } overflow-x-hidden min-h-screen `}
         >
-          <div className="w-[90vw] mx-auto py-4">
+          <div className="w-full lg:w-11/12 px-1 lg:px-0 mx-auto py-4">
             <Navbar dark={dark} setDark={setDark} />
           </div>
           {children}
