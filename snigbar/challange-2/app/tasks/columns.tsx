@@ -11,7 +11,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { MoreHorizontal } from "lucide-react";
+import { ArrowUpDown, MoreHorizontal } from "lucide-react";
+import { DataTableColumnHeader } from "@/components/Table-Column-Header";
 
 export type Tasks = Pick<
   TTask,
@@ -25,7 +26,9 @@ export const columns: ColumnDef<Tasks>[] = [
   },
   {
     accessorKey: "title",
-    header: "Title",
+    header: ({ column }) => {
+      return <DataTableColumnHeader column={column} title="Title" />;
+    },
   },
   {
     accessorKey: "status",
