@@ -13,6 +13,7 @@ import {
 import { Button } from "./ui/button";
 import { DownloadIcon, SlidersHorizontalIcon } from "lucide-react";
 import { downloadToExcel } from "@/lib/downloadToCSV";
+import { CreateTask } from "./createTask/CreateTask";
 
 interface DataTableToolbarProps<TData> {
   table: Table<TData>;
@@ -37,6 +38,10 @@ export function DataTableMenubar<TData>({
       </div>
 
       <div className="flex items-center justify-between gap-4">
+        {/* add task */}
+        <CreateTask />
+
+        {/* download csv */}
         <Button
           size="sm"
           onClick={() => downloadToExcel(table)}
@@ -58,7 +63,7 @@ export function DataTableMenubar<TData>({
               View
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="w-[150px] bg-white">
+          <DropdownMenuContent align="end" className="w-[150px]">
             <DropdownMenuLabel>Toggle columns</DropdownMenuLabel>
             <DropdownMenuSeparator />
             {table

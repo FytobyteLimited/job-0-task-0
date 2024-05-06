@@ -27,13 +27,8 @@ export interface TTaskContent extends IContent {
   updatedAt: Date;
 }
 
-export interface TTaskContent {
-  id: string;
-  code: string;
-  title: string;
-  status: string;
-  label: string;
-  priority: string;
-  createdAt: Date;
-  updatedAt: Date;
+export interface AddTaskResponse {
+  success: boolean;
+  message: string;
+  error?: Error;
 }

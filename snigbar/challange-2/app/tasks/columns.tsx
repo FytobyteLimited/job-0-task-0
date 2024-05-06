@@ -13,6 +13,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { ArrowUpDown, MoreHorizontal } from "lucide-react";
 import { DataTableColumnHeader } from "@/components/Table-Column-Header";
+import { Badge } from "@/components/ui/badge";
+import { Checkbox } from "@/components/ui/checkbox";
 
 export type Tasks = Pick<
   TTask,
@@ -21,6 +23,33 @@ export type Tasks = Pick<
 
 export const columns: ColumnDef<Tasks>[] = [
   {
+    id: "select",
+    header: ({ table }) => (
+      <Checkbox
+        checked={
+          table.getIsAllPageRowsSelected() ||
+          (table.getIsSomePageRowsSelected() && "indeterminate")
+        }
+        onCheckedChange={(value: boolean) =>
+          table.toggleAllPageRowsSelected(!!value)
+        }
+        aria-label="Select all"
+        className="rounded-lg"
+      />
+    ),
+    cell: ({ row }) => (
+      <Checkbox
+        checked={row.getIsSelected()}
+        onCheckedChange={(value: boolean) => row.toggleSelected(!!value)}
+        aria-label="Select row"
+        className="rounded-lg "
+      />
+    ),
+    enableSorting: false,
+    enableHiding: false,
+  },
+
+  {
     accessorKey: "code",
     header: "Task",
   },
@@ -28,6 +57,16 @@ export const columns: ColumnDef<Tasks>[] = [
     accessorKey: "title",
     header: ({ column }) => {
       return <DataTableColumnHeader column={column} title="Title" />;
+    },
+    cell: ({ row }) => {
+      return (
+        <div className="flex space-x-2">
+          <Badge variant="outline">{row.original.label}</Badge>
+          <span className="max-w-[500px] truncate font-medium">
+            {row.getValue("title")}
+          </span>
+        </div>
+      );
     },
   },
   {
@@ -66,7 +105,7 @@ export const columns: ColumnDef<Tasks>[] = [
               <MoreHorizontal className="h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="bg-white">
+          <DropdownMenuContent align="end">
             <DropdownMenuLabel>Actions</DropdownMenuLabel>
             <DropdownMenuItem
               onClick={() => navigator.clipboard.writeText(task.id)}
