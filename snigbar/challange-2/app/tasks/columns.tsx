@@ -70,11 +70,14 @@ export const columns: ColumnDef<Tasks>[] = [
       return <DataTableColumnHeader column={column} title="Title" />;
     },
     cell: ({ row }) => {
+      const title = row.getValue("title") as string;
+      const trimmedString =
+        title.length > 50 ? title.substring(0, 50) + "..." : title;
       return (
         <div className="flex space-x-2">
           <Badge variant="outline">{row.original.label}</Badge>
           <span className="max-w-[500px] truncate font-medium">
-            {row.getValue("title")}
+            {trimmedString}
           </span>
         </div>
       );
