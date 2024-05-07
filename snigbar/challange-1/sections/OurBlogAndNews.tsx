@@ -1,4 +1,4 @@
-import IconButtons from "@/components/utilities/IconButtons";
+import IconButtons from "@/sections/IconButtons";
 import SectionHeading from "@/components/utilities/SectionHeading";
 import { NewsIcon } from "@/components/utilities/icons";
 import Image from "next/image";

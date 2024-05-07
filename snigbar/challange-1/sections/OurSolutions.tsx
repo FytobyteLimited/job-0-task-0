@@ -1,8 +1,8 @@
 import SolutionsBanner from "@/components/SolutionsBanner/SolutionsBanner";
-import IconButtons from "@/components/utilities/IconButtons";
+import IconButtons from "@/sections/IconButtons";
+
 import SectionHeading from "@/components/utilities/SectionHeading";
 import { UmbrellaIcon } from "@/components/utilities/icons";
-import Image from "next/image";
 import React from "react";
 
 const OurSolutions = () => {

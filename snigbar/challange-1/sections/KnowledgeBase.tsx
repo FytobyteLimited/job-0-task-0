@@ -1,5 +1,5 @@
 import CardsWithIcon from "@/components/CardsWithIcon";
-import IconButtons from "@/components/utilities/IconButtons";
+import IconButtons from "@/sections/IconButtons";
 import SectionHeading from "@/components/utilities/SectionHeading";
 import { ApiIcon, BookIcon } from "@/components/utilities/icons";
 import Image from "next/image";
