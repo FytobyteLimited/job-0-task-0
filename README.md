@@ -1,13 +1,5 @@
 # job-0-task-0
 
-## Fytobyte - task (Challenge 1) (snigbar)
-
-### Live URL [click here](https://job-0-task-0-theta.vercel.app/)
-
-## Fytobyte - task (Challenge 2) (snigbar)
-
-### Live URL [click here](https://data-table-tanstack.vercel.app/)
-
 # Challage-1
 
 **Convert Figma file to Static Site **
