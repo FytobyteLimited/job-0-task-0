@@ -27,7 +27,7 @@ const Navbar = () => {
     <nav
       className={`z-50 mx-auto flex items-center justify-between px-4 py-2 md:px-8 md:py-3 text-white md:rounded-full ${
         scrollY > 350 ? "bg-white shadow-md dark:bg-white/40" : "md:bg-white/25"
-      } w-full md:w-11/12 lg:w-2/3 fixed md:top-4 backdrop-blur-md`}
+      } w-full md:w-11/12 lg:w-3/4 fixed md:top-4 backdrop-blur-md`}
     >
       <LogoImage />
       <ul className="hidden md:flex items-center justify-between gap-4 text-primary-blue dark:text-white text-[15px]">
