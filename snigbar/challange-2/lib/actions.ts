@@ -4,40 +4,6 @@ import { connectToDB } from "./connection";
 import TaskModel from "./models/model";
 import { TTask } from "@/app/interfaces/interfaces";
 
-// export const createTasktoDB = async (data: taskData) => {
-//   try {
-//     if (!data) throw new Error("no data");
-
-//     const response = await fetch("/api/tasks", {
-//       method: "POST",
-//       body: JSON.stringify(data),
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//     });
-
-//     if (response.ok) {
-//       revalidatePath("/");
-//       return {
-//         success: true,
-//         message: "task added successfully",
-//         data: await response.json(),
-//       };
-//     } else {
-//       return {
-//         success: false,
-//         message: "failed to add task",
-//       };
-//     }
-//   } catch (error) {
-//     return {
-//       success: false,
-//       message: "failed to add task",
-//       error: error,
-//     };
-//   }
-// };
-
 export const createTasktoDB = async (data: FormData) => {
   await connectToDB();
   try {
@@ -110,6 +76,39 @@ export const deleteTask = async (id: string) => {
     return {
       success: false,
       message: "failed to delete",
+    };
+  }
+};
+
+export const updateTaskLabel = async (id: string, label: string) => {
+  await connectToDB();
+  try {
+    console.log(label);
+    const result = await TaskModel.findByIdAndUpdate(id, { label });
+    console.log(result);
+    if (result) {
+      revalidatePath("/");
+      return {
+        success: true,
+        message: "Task label updated",
+      };
+    } else {
+      return {
+        success: false,
+        message: "Unable to update task label",
+      };
+    }
+  } catch (error) {
+    if (error instanceof Error) {
+      return {
+        success: false,
+        message: "failed to update",
+        error: error.message,
+      };
+    }
+    return {
+      success: false,
+      message: "failed to update",
     };
   }
 };

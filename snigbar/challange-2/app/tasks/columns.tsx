@@ -1,7 +1,7 @@
 "use client";
 
 import { ColumnDef } from "@tanstack/react-table";
-import { TTask } from "../interfaces/interfaces";
+import { LabelType, TTask } from "../interfaces/interfaces";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,6 +16,7 @@ import { DataTableColumnHeader } from "@/components/Table-Column-Header";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
 import { AlertDialogDelete } from "@/components/DeleteTask/DeleteTask";
+import UpdateLabel from "@/components/UpdateLabel/UpdateLabel";
 
 export type Tasks = Pick<
   TTask,
@@ -105,6 +106,7 @@ export const columns: ColumnDef<Tasks>[] = [
     cell: ({ row }) => {
       const task = row.original;
       const id = row.getValue("_id") as string;
+      const label = row.original.label;
 
       return (
         <DropdownMenu>
@@ -122,8 +124,7 @@ export const columns: ColumnDef<Tasks>[] = [
               Copy payment ID
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>View customer</DropdownMenuItem>
-
+            <UpdateLabel id={id} label={label} />
             <AlertDialogDelete id={id} />
           </DropdownMenuContent>
         </DropdownMenu>
