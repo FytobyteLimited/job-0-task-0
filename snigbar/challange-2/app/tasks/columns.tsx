@@ -1,17 +1,25 @@
 "use client";
 
 import { ColumnDef } from "@tanstack/react-table";
-import { LabelType, TTask } from "../interfaces/interfaces";
+import { TTask } from "../interfaces/interfaces";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { ArrowUpDown, MoreHorizontal } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowRight,
+  ArrowUp,
+  CheckCircleIcon,
+  CircleHelp,
+  CircleX,
+  MoreHorizontal,
+  TimerIcon,
+} from "lucide-react";
 import { DataTableColumnHeader } from "@/components/Table-Column-Header";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -55,13 +63,6 @@ export const columns: ColumnDef<Tasks>[] = [
   {
     accessorKey: "code",
     header: "Task",
-    // cell: ({ row }) => {
-    //   return (
-    //     <div className="">
-    //       {(row.getValue("_id") as string).substring(0, 8)}
-    //     </div>
-    //   );
-    // },
   },
   {
     accessorKey: "title",
@@ -84,11 +85,75 @@ export const columns: ColumnDef<Tasks>[] = [
     header: ({ column }) => {
       return <DataTableColumnHeader column={column} title="Status" />;
     },
+    cell: ({ row }) => {
+      const status = row.original.status;
+      if (status === "todo") {
+        return (
+          <div className="flex gap-1 items-center">
+            <CircleHelp className="h-4 w-4 text-gray-600 dark:text-gray-400" />
+            <span>{status.charAt(0).toUpperCase() + status.slice(1)}</span>
+          </div>
+        );
+      } else if (status === "in-progress") {
+        return (
+          <div className="flex gap-1 items-center">
+            <TimerIcon className="h-4 w-4 text-gray-600 dark:text-gray-400" />
+            <span>{status.charAt(0).toUpperCase() + status.slice(1)}</span>
+          </div>
+        );
+      } else if (status === "canceled") {
+        return (
+          <div className="flex gap-1 items-center">
+            <CircleX className="h-4 w-4 text-gray-600 dark:text-gray-400" />
+            <span>{status.charAt(0).toUpperCase() + status.slice(1)}</span>
+          </div>
+        );
+      } else {
+        return (
+          <div className="flex gap-1 items-center">
+            <CheckCircleIcon className="h-4 w-4 text-gray-600 dark:text-gray-400" />
+            <span>{status.charAt(0).toUpperCase() + status.slice(1)}</span>
+          </div>
+        );
+      }
+    },
+    filterFn: (row, id, value) => {
+      return value.includes(row.getValue(id));
+    },
   },
   {
     accessorKey: "priority",
     header: ({ column }) => {
       return <DataTableColumnHeader column={column} title="Priority" />;
+    },
+    cell: ({ row }) => {
+      const priority = row.original.priority;
+
+      if (priority === "high") {
+        return (
+          <div className="flex gap-1 items-center">
+            <ArrowUp className="h-4 w-4 text-gray-600 dark:text-gray-400" />
+            <span>{priority.charAt(0).toUpperCase() + priority.slice(1)}</span>
+          </div>
+        );
+      } else if (priority === "medium") {
+        return (
+          <div className="flex gap-1 items-center">
+            <ArrowRight className="h-4 w-4 text-gray-600 dark:text-gray-400" />
+            <span>{priority.charAt(0).toUpperCase() + priority.slice(1)}</span>
+          </div>
+        );
+      } else {
+        return (
+          <div className="flex gap-1 items-center">
+            <ArrowDown className="h-4 w-4 text-gray-600 dark:text-gray-400" />
+            <span>{priority.charAt(0).toUpperCase() + priority.slice(1)}</span>
+          </div>
+        );
+      }
+    },
+    filterFn: (row, id, value) => {
+      return value.includes(row.getValue(id));
     },
   },
   {
@@ -97,8 +162,14 @@ export const columns: ColumnDef<Tasks>[] = [
       return <DataTableColumnHeader column={column} title="CreatedAt" />;
     },
     cell: ({ row }) => {
-      const date = new Date(row.getValue("createdAt")).toLocaleDateString();
-      return <div>{date}</div>;
+      const date = new Date(row.getValue("createdAt"));
+      const formattedDate = date.toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+      });
+
+      return <div>{formattedDate}</div>;
     },
   },
 
@@ -114,12 +185,14 @@ export const columns: ColumnDef<Tasks>[] = [
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="h-8 w-8 p-0">
               <span className="sr-only">Open menu</span>
-              <MoreHorizontal className="h-4 w-4" />
+              <MoreHorizontal className="h-4 w-4 text-grsy-500" />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
+          <DropdownMenuContent align="center">
             <DropdownMenuLabel>Actions</DropdownMenuLabel>
+
             <EditTask task={task} />
+
             <DropdownMenuSeparator />
             <UpdateLabel id={id} label={label} />
             <AlertDialogDelete id={id} />

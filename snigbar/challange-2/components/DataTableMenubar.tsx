@@ -11,9 +11,17 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { Button } from "./ui/button";
-import { DownloadIcon, SlidersHorizontalIcon } from "lucide-react";
+import {
+  CrossIcon,
+  DownloadIcon,
+  SlidersHorizontalIcon,
+  XCircleIcon,
+  XIcon,
+} from "lucide-react";
 import { downloadToExcel } from "@/lib/downloadToCSV";
 import { CreateTask } from "./createTask/CreateTask";
+import { DataTableFacetedFilter } from "./data-table-faceted-filter";
+import { priorities, statuses } from "@/lib/constants";
 
 interface DataTableToolbarProps<TData> {
   table: Table<TData>;
@@ -26,15 +34,40 @@ export function DataTableMenubar<TData>({
 
   return (
     <div className="flex items-center justify-between my-4">
-      <div className="flex flex-1 items-center space-x-2">
+      <div className="flex flex-1 items-center gap-2 space-x-2">
         <Input
           placeholder="Filter tasks..."
           value={(table.getColumn("title")?.getFilterValue() as string) ?? ""}
           onChange={(event: any) =>
             table.getColumn("title")?.setFilterValue(event.target.value)
           }
-          className="h-8 w-[150px] lg:w-[250px] rounded-[10px] border border-slate-200 py-4"
+          className="h-8 w-[150px] lg:w-[250px] rounded-md border border-slate-400 py-4"
         />
+
+        {table.getColumn("status") && (
+          <DataTableFacetedFilter
+            column={table.getColumn("status")}
+            title="Status"
+            options={statuses}
+          />
+        )}
+        {table.getColumn("priority") && (
+          <DataTableFacetedFilter
+            column={table.getColumn("priority")}
+            title="Priority"
+            options={priorities}
+          />
+        )}
+        {isFiltered && (
+          <Button
+            variant="ghost"
+            onClick={() => table.resetColumnFilters()}
+            className="h-8 px-2 lg:px-3"
+          >
+            Reset
+            <XCircleIcon className="ml-2 h-4 w-4" />
+          </Button>
+        )}
       </div>
 
       <div className="flex items-center justify-between gap-4">

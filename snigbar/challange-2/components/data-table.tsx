@@ -11,6 +11,9 @@ import {
   ColumnFiltersState,
   getFilteredRowModel,
   VisibilityState,
+  getFacetedRowModel,
+  getFacetedUniqueValues,
+  getFacetedMinMaxValues, //depends on getFacetedRowModel
 } from "@tanstack/react-table";
 
 import {
@@ -45,14 +48,18 @@ export function DataTable<TData, TValue>({
   const table = useReactTable({
     data,
     columns,
-    getCoreRowModel: getCoreRowModel(),
-    getPaginationRowModel: getPaginationRowModel(),
-    onSortingChange: setSorting,
-    getSortedRowModel: getSortedRowModel(),
-    onColumnFiltersChange: setColumnFilters,
-    getFilteredRowModel: getFilteredRowModel(),
-    onColumnVisibilityChange: setColumnVisibility,
+    enableRowSelection: true,
     onRowSelectionChange: setRowSelection,
+    onSortingChange: setSorting,
+    onColumnFiltersChange: setColumnFilters,
+    onColumnVisibilityChange: setColumnVisibility,
+    getCoreRowModel: getCoreRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    getSortedRowModel: getSortedRowModel(),
+    getFacetedRowModel: getFacetedRowModel(),
+    getFacetedUniqueValues: getFacetedUniqueValues(),
+    getFacetedMinMaxValues: getFacetedMinMaxValues(),
     state: {
       sorting,
       columnFilters,
@@ -61,7 +68,6 @@ export function DataTable<TData, TValue>({
     },
   });
 
-  // console.log(table.getRowModel().rows.map((val) => val.original));
   return (
     <div>
       <DataTableMenubar table={table} />
