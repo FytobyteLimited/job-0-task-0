@@ -1,6 +1,5 @@
 import SolutionsBanner from "@/components/SolutionsBanner/SolutionsBanner";
 import IconButtons from "@/sections/IconButtons";
-
 import SectionHeading from "@/components/utilities/SectionHeading";
 import { UmbrellaIcon } from "@/components/utilities/icons";
 import React from "react";
