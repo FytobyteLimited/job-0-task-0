@@ -1,5 +1,4 @@
 "use client";
-
 import { Table } from "@tanstack/react-table";
 import { Input } from "./ui/input";
 import {
@@ -11,13 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { Button } from "./ui/button";
-import {
-  CrossIcon,
-  DownloadIcon,
-  SlidersHorizontalIcon,
-  XCircleIcon,
-  XIcon,
-} from "lucide-react";
+import { DownloadIcon, SlidersHorizontalIcon, XCircleIcon } from "lucide-react";
 import { downloadToExcel } from "@/lib/downloadToCSV";
 import { CreateTask } from "./createTask/CreateTask";
 import { DataTableFacetedFilter } from "./data-table-faceted-filter";
@@ -81,7 +74,7 @@ export function DataTableMenubar<TData>({
           variant="outline"
           className="ml-auto h-8 lg:flex border-slate-200 flex justify-between items-center gap-2"
         >
-          <DownloadIcon className="w-6 h-6" />
+          <DownloadIcon className="w-4 h-4 text-primary" />
           Export
         </Button>
         {/* data table column filter */}
