@@ -72,28 +72,6 @@ export function CreateTask() {
       });
     }
   }
-
-  // async function onSubmit(values: z.infer<typeof taskSchma>) {
-
-  //   const data = await createTasktoDB(values);
-
-  //   if (data.success) {
-  //     form.reset();
-  //     setOpen(false);
-  //     toast({
-  //       title: "Task added",
-  //       description: data.message || "added successfully",
-  //     });
-  //   } else {
-  //     toast({
-  //       variant: "destructive",
-  //       title: "Something went wrong.",
-  //       description: data.message || "There was a problem to create task",
-  //     });
-  //     console.log(data);
-  //   }
-  // }
-
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
@@ -223,7 +201,7 @@ export function CreateTask() {
 
               {/* submit */}
               <DialogFooter>
-                <Button type="submit">Save changes</Button>
+                <Button type="submit">Add Task</Button>
               </DialogFooter>
             </form>
           </Form>

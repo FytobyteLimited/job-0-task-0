@@ -3,6 +3,7 @@ import { revalidatePath } from "next/cache";
 import { connectToDB } from "./connection";
 import TaskModel from "./models/model";
 import { TTask } from "@/app/interfaces/interfaces";
+import { Tasks } from "@/app/tasks/columns";
 
 export const createTasktoDB = async (data: FormData) => {
   await connectToDB();
@@ -83,9 +84,8 @@ export const deleteTask = async (id: string) => {
 export const updateTaskLabel = async (id: string, label: string) => {
   await connectToDB();
   try {
-    console.log(label);
     const result = await TaskModel.findByIdAndUpdate(id, { label });
-    console.log(result);
+
     if (result) {
       revalidatePath("/");
       return {
@@ -96,6 +96,39 @@ export const updateTaskLabel = async (id: string, label: string) => {
       return {
         success: false,
         message: "Unable to update task label",
+      };
+    }
+  } catch (error) {
+    if (error instanceof Error) {
+      return {
+        success: false,
+        message: "failed to update",
+        error: error.message,
+      };
+    }
+    return {
+      success: false,
+      message: "failed to update",
+    };
+  }
+};
+
+export const updateTasks = async (id: string, data: Partial<Tasks>) => {
+  await connectToDB();
+
+  try {
+    const result = await TaskModel.findOneAndUpdate({ _id: id }, { ...data });
+    console.log(result);
+    if (result) {
+      revalidatePath("/");
+      return {
+        success: true,
+        message: "Task updated",
+      };
+    } else {
+      return {
+        success: false,
+        message: "Unable to update task",
       };
     }
   } catch (error) {

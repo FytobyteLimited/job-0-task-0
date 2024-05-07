@@ -17,6 +17,7 @@ import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
 import { AlertDialogDelete } from "@/components/DeleteTask/DeleteTask";
 import UpdateLabel from "@/components/UpdateLabel/UpdateLabel";
+import { EditTask } from "@/components/EditTask/EditTask";
 
 export type Tasks = Pick<
   TTask,
@@ -52,15 +53,15 @@ export const columns: ColumnDef<Tasks>[] = [
   },
 
   {
-    accessorKey: "_id",
+    accessorKey: "code",
     header: "Task",
-    cell: ({ row }) => {
-      return (
-        <div className="">
-          {(row.getValue("_id") as string).substring(0, 8)}
-        </div>
-      );
-    },
+    // cell: ({ row }) => {
+    //   return (
+    //     <div className="">
+    //       {(row.getValue("_id") as string).substring(0, 8)}
+    //     </div>
+    //   );
+    // },
   },
   {
     accessorKey: "title",
@@ -105,7 +106,7 @@ export const columns: ColumnDef<Tasks>[] = [
     id: "acitons",
     cell: ({ row }) => {
       const task = row.original;
-      const id = row.getValue("_id") as string;
+      const id = row.original._id;
       const label = row.original.label;
 
       return (
@@ -118,11 +119,7 @@ export const columns: ColumnDef<Tasks>[] = [
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Actions</DropdownMenuLabel>
-            <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(task._id)}
-            >
-              Copy payment ID
-            </DropdownMenuItem>
+            <EditTask task={task} />
             <DropdownMenuSeparator />
             <UpdateLabel id={id} label={label} />
             <AlertDialogDelete id={id} />
