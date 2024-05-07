@@ -1,7 +1,8 @@
 import SectionHeading from "@/components/utilities/SectionHeading";
-import IconButtons from "@/components/utilities/IconButtons";
+
 import { SettingIcon } from "@/components/utilities/icons";
 import ServicesCards from "@/components/ServicesCards/ServicesCards";
+import IconButtons from "@/components/utilities/IconButtons";
 
 export const OurServices = () => {
   return (
