@@ -1,9 +1,7 @@
 "use server";
 import { revalidatePath } from "next/cache";
-
 import { connectToDB } from "./connection";
 import TaskModel from "./models/model";
-import { Result } from "postcss";
 import { TTask } from "@/app/interfaces/interfaces";
 
 // export const createTasktoDB = async (data: taskData) => {
@@ -76,9 +74,42 @@ export const createTasktoDB = async (data: FormData) => {
   }
 };
 
+// get all task
 export const getAlltasks = async (): Promise<TTask[]> => {
   await connectToDB();
 
   const tasks = await TaskModel.find({});
-  return tasks;
+  return JSON.parse(JSON.stringify(tasks));
+};
+// delete task
+
+export const deleteTask = async (id: string) => {
+  await connectToDB();
+  try {
+    const result = await TaskModel.deleteOne({ _id: id });
+    if (result.deletedCount === 1) {
+      revalidatePath("/");
+      return {
+        success: true,
+        message: "Task deleted",
+      };
+    } else {
+      return {
+        success: false,
+        message: "Failed to delete task",
+      };
+    }
+  } catch (error) {
+    if (error instanceof Error) {
+      return {
+        success: false,
+        message: "failed to delete",
+        error: error.message,
+      };
+    }
+    return {
+      success: false,
+      message: "failed to delete",
+    };
+  }
 };

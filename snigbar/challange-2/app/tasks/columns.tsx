@@ -15,10 +15,11 @@ import { ArrowUpDown, MoreHorizontal } from "lucide-react";
 import { DataTableColumnHeader } from "@/components/Table-Column-Header";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
+import { AlertDialogDelete } from "@/components/DeleteTask/DeleteTask";
 
 export type Tasks = Pick<
   TTask,
-  "id" | "code" | "title" | "status" | "label" | "priority" | "createdAt"
+  "_id" | "code" | "title" | "status" | "label" | "priority" | "createdAt"
 >;
 
 export const columns: ColumnDef<Tasks>[] = [
@@ -50,8 +51,15 @@ export const columns: ColumnDef<Tasks>[] = [
   },
 
   {
-    accessorKey: "code",
+    accessorKey: "_id",
     header: "Task",
+    cell: ({ row }) => {
+      return (
+        <div className="">
+          {(row.getValue("_id") as string).substring(0, 8)}
+        </div>
+      );
+    },
   },
   {
     accessorKey: "title",
@@ -96,6 +104,7 @@ export const columns: ColumnDef<Tasks>[] = [
     id: "acitons",
     cell: ({ row }) => {
       const task = row.original;
+      const id = row.getValue("_id") as string;
 
       return (
         <DropdownMenu>
@@ -108,13 +117,14 @@ export const columns: ColumnDef<Tasks>[] = [
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Actions</DropdownMenuLabel>
             <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(task.id)}
+              onClick={() => navigator.clipboard.writeText(task._id)}
             >
               Copy payment ID
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>View customer</DropdownMenuItem>
-            <DropdownMenuItem>View payment details</DropdownMenuItem>
+
+            <AlertDialogDelete id={id} />
           </DropdownMenuContent>
         </DropdownMenu>
       );

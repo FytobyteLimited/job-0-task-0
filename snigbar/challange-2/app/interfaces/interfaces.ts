@@ -3,7 +3,7 @@ export type LabelType = "bug" | "feature" | "enhancement" | "documentation";
 export type PriorityType = "low" | "medium" | "high";
 
 export interface TTask {
-  id: string;
+  _id: string;
   code: string;
   title: string;
   status: TaskStatus;
@@ -17,7 +17,7 @@ export interface IContent {
   [key: string]: string | number | boolean | Date | IContent | null;
 }
 export interface TTaskContent extends IContent {
-  id: string;
+  _id: string;
   code: string;
   title: string;
   status: TaskStatus;

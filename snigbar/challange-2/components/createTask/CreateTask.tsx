@@ -53,7 +53,7 @@ export function CreateTask() {
     formData.append("status", values.status);
     formData.append("label", values.label);
     formData.append("priority", values.priority);
-    formData.append("code", uuid().slice(8).slice(5));
+    formData.append("code", uuid().replace(/-/g, "").substring(0, 8));
 
     const data = await createTasktoDB(formData);
 
@@ -70,7 +70,6 @@ export function CreateTask() {
         title: "Something went wrong.",
         description: data.message || "There was a problem to create task",
       });
-      console.log(data);
     }
   }
 
