@@ -2,31 +2,21 @@
 
 # Challage-1
 
-  **Convert Figma file to Static Site **
-Live Link: https://fytobyte-rho.vercel.app
+**Convert Figma file to Static Site **
 
-Landing Page xl device(1440px): 
-![landing page](https://github.com/Aahmed-Hossain/Fytobyte/assets/138388233/65f65fe7-11df-427a-a8a6-a54b3140e4a3)
-
-Landing Page mobile device : 
-
-![landing page mobile](https://github.com/Aahmed-Hossain/Fytobyte/assets/138388233/626b8440-1e2d-4b5e-9db8-7b00333efa43)
-
-
-
-About Page: 
-![about](https://github.com/Aahmed-Hossain/Fytobyte/assets/138388233/b20b7993-fe71-4f0d-bb0b-d4d368d3ec49)
-
-Contact page: 
-![contact](https://github.com/Aahmed-Hossain/Fytobyte/assets/138388233/344b14c5-4c10-4292-a9bf-e81b37bc655c)
-
+- > [Figma File](https://www.figma.com/file/gom2LU5icGzs4gGtqW0RSz/task-0?type=design&node-id=0%3A1&mode=design&t=FqKVtY2e4m8KzQX5-1)
+- > [Dev mood file](https://www.figma.com/file/gom2LU5icGzs4gGtqW0RSz/task-0?type=design&node-id=0%3A1&mode=dev&t=1H7PRNHBgSabOjgG-1)
 
 # chllange-2
 
-  **Replicate a live site and its functionality**
-Live Link: https://table-pi-ashen.vercel.app
+**Replicate a live site and its functionality**
 
-Landing page task Table :
+> [Site Url](https://task-o.vercel.app/)
 
-![table landing page](https://github.com/Aahmed-Hossain/Fytobyte/assets/138388233/901c514d-0c29-4400-87f6-5bb78434f04d)
+Submission :
 
+- Fork The Repo
+- Create a Directory With you github username and 2 more sub - directories with the name Challange-1 & 2
+- after completing the task create a pr to this repo
+- must provide live link
+- Deadline 5th may 12AM Bangladesh standard time

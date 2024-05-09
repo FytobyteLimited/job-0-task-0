@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  scroll-behavior: smooth;
+}
+.gradient-text {
+  background-image: linear-gradient(to right, black 60%, #e7e7e7);
+  color: transparent;
+  background-clip: text;
+}
+
+.dark .gradient-text {
+  background-image: linear-gradient(to right, white 60%, #685e5e);
+}
